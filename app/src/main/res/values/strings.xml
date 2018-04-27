@@ -2,4 +2,7 @@
     <string name="app_name">ProjetoDevApps</string>
     <string name="open_drawer">Abrir drawer</string>
     <string name="close_drawer">Fechar drawer</string>
+    <string name="str_menu_header_atalhos">Atalhos</string>
+    <string name="str_menu_header_informacoes">Informações</string>
+    <string name="str_menu_header_configuracoes">Configurações</string>
 </resources>
