@@ -17,15 +17,9 @@ class MainActivity : AppCompatActivity() {
 
     fun setupDrawer() {
         drawerView.addView(DrawerHeader())
-                .addView(DrawerMenuItem(applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_PROFILE))
-                .addView(DrawerMenuItem(applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_REQUESTS))
-                .addView(DrawerMenuItem(applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_MESSAGE))
-                .addView(DrawerMenuItem(applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_GROUPS))
-                .addView(DrawerMenuItem(applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_NOTIFICATIONS))
-                .addView(DrawerMenuItem(applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_TERMS))
-                .addView(DrawerMenuItem(applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_SETTINGS))
-                .addView(DrawerMenuItem(applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_LOGOUT))
-
+                .addView(DrawerMenuHeader(applicationContext, DrawerMenuHeader.DRAWER_MENU_HEADER_ITEM_ATALHOS))
+                .addView(DrawerMenuHeader(applicationContext, DrawerMenuHeader.DRAWER_MENU_HEADER_ITEM_INFORMACOES))
+                .addView(DrawerMenuHeader(applicationContext, DrawerMenuHeader.DRAWER_MENU_HEADER_ITEM_CONFIGURACOES))
 
         // toolbar cast como View
         val drawerToggle: ActionBarDrawerToggle = object :
