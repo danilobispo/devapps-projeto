@@ -1,12 +1,7 @@
 package com.example.hal_9000.projetodevapps
 
-import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.view.inputmethod.EditorInfo
-import android.widget.*
-import android.content.Intent
 
 
 import android.support.v7.app.ActionBarDrawerToggle
@@ -18,8 +13,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main);
-        setupDrawer();
+        setContentView(R.layout.activity_main)
+        setupDrawer()
+        setupFragment()
     }
 
     fun setupDrawer() {
@@ -38,8 +34,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        drawer.addDrawerListener(drawerToggle);
-        drawerToggle.syncState();
+        drawer.addDrawerListener(drawerToggle)
+        drawerToggle.syncState()
+    }
+
+    fun setupFragment() {
+        this.fragmentManager.beginTransaction().replace(R.id.content_frame, LoginFragment())
+            .addToBackStack(null).commit()
     }
 
 }

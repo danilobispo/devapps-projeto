@@ -11,7 +11,7 @@ import android.view.ViewGroup
  */
 class LegislacaoFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val rootView = inflater?.inflate(R.layout.fragment_legislacao, container, false)
+        val rootView = inflater?.inflate(R.layout.legislacao_fragment, container, false)
         return rootView
     }
 }
