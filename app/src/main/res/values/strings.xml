@@ -19,5 +19,7 @@
     <string name="str_menu_header_atalhos">Atalhos</string>
     <string name="str_menu_header_informacoes">Informações</string>
     <string name="str_menu_header_configuracoes">Configurações</string>
+    <string name="titulo">Lei nº 14.483, de 16 de julho de 2007</string>
+    <string name="capitulo">CAPÍTULO II - DAS DOAÇÕES</string>
     <string name="str_sair">Sair</string>
 </resources>

@@ -17,6 +17,9 @@
         <item name="spinBars">false</item>
         <item name="color">#FFFFFF</item>
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 
 
 </resources>
