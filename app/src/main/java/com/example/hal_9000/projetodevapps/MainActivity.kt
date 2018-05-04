@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         drawerView.addView(DrawerHeader())
             .addView(ExpandableListMenu(this))
 
+
         // toolbar cast como View
         val drawerToggle: ActionBarDrawerToggle = object :
             ActionBarDrawerToggle(this, drawer, toolbar as Toolbar, R.string.open_drawer, R.string.close_drawer) {

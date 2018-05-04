@@ -39,13 +39,15 @@
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_gravity="left"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:scrollbars="none">
 
         <com.mindorks.placeholderview.PlaceHolderView
             android:id="@+id/drawerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="vertical" />
+            android:background="#FFFFFF"
+            android:scrollbars="none"/>
     </FrameLayout>
 
 </android.support.v4.widget.DrawerLayout>

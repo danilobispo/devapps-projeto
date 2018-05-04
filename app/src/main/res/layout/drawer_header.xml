@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="178dp"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
+    android:background="@color/drawer_primary_color"
     android:paddingLeft="30dp">
     <ImageView
         android:id="@+id/profileImageView"
@@ -16,16 +16,8 @@
         android:id="@+id/nameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/cor_texto"
         android:textSize="14sp"
         android:layout_marginTop="20dp"
         android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/emailTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="5dp"
-        android:textSize="14sp"
-        android:textStyle="normal"/>
 </LinearLayout>

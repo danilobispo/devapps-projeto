@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Projeto.iml" filepath="$PROJECT_DIR$/Projeto.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/teste.iml" filepath="$PROJECT_DIR$/teste.iml" />
+      <module fileurl="file://C:\Users\HAL-9000\Google Drive\UnB\DevApps\Projeto\teste.iml" filepath="C:\Users\HAL-9000\Google Drive\UnB\DevApps\Projeto\teste.iml" />
     </modules>
   </component>
 </project>

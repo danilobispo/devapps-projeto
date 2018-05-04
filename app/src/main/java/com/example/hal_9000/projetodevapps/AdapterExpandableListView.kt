@@ -1,13 +1,8 @@
 package com.example.hal_9000.projetodevapps
 
 import android.app.Activity
-import android.app.Fragment
-import android.app.FragmentTransaction
 import android.content.Context
-import android.content.Intent
-import android.graphics.Color
 import android.support.constraint.ConstraintLayout
-import android.support.v4.app.FragmentActivity
 import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
@@ -73,8 +68,6 @@ class AdapterExpandableListView(
         view.setOnClickListener({
             Toast.makeText(context, subcategoria.nome, Toast.LENGTH_LONG).show()
             if(subcategoria.fragmentReference != null){
-                Toast.makeText(context, "AAAAA", Toast.LENGTH_LONG).show()
-                subcategoria.fragmentReference = Fragment()
                     val activityContext = context as Activity
                     val fragManager = activityContext.fragmentManager.beginTransaction()
                     fragManager.replace(R.id.content_frame, subcategoria.fragmentReference)

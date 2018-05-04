@@ -7,5 +7,5 @@ import java.lang.ref.PhantomReference
 * Created by Danilo José Bispo Galvão on 27/04/2018.
 */
 
-class Subcategoria(var nome: String, var fragmentReference: Fragment?) {
+class Subcategoria(var nome: String, var fragmentReference: Fragment? = Fragment()) {
 }

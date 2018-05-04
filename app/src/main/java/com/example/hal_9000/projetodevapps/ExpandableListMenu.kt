@@ -3,7 +3,6 @@ package com.example.hal_9000.projetodevapps
 import android.content.Context
 import android.support.v4.content.ContextCompat
 import android.widget.ExpandableListView
-import android.widget.LinearLayout
 import com.example.hal_9000.projetodevapps.Model.Categoria
 import com.example.hal_9000.projetodevapps.Model.Subcategoria
 import com.mindorks.placeholderview.annotations.Layout
