@@ -15,7 +15,6 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.text.TextUtils
 import android.view.KeyEvent
-import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.*
 import java.util.ArrayList
@@ -50,13 +49,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main);
         setupDrawer();
+        // Set up the login form.
+        mEmailView = findViewById<View>(R.id.email) as AutoCompleteTextView
+        mPasswordView = findViewById<View>(R.id.password) as EditText
+        mPasswordView!!.setOnEditorActionListener(TextView.OnEditorActionListener { textView, id, keyEvent ->
+            if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
+                attemptLogin()
+                return@OnEditorActionListener true
+            }
+            false
+        })
+
+        val mEmailSignInButton = findViewById<View>(R.id.email_sign_in_button) as Button
+        mEmailSignInButton.setOnClickListener { attemptLogin() }
+
+        mLoginFormView = findViewById(R.id.email_login_form)
+        mProgressView = findViewById(R.id.login_progress)
     }
 
     fun setupDrawer() {
         drawerView.addView(DrawerHeader())
-                .addView(DrawerMenuHeader(applicationContext, DrawerMenuHeader.DRAWER_MENU_HEADER_ITEM_ATALHOS))
-                .addView(DrawerMenuHeader(applicationContext, DrawerMenuHeader.DRAWER_MENU_HEADER_ITEM_INFORMACOES))
-                .addView(DrawerMenuHeader(applicationContext, DrawerMenuHeader.DRAWER_MENU_HEADER_ITEM_CONFIGURACOES))
+                .addView(ExpandableListMenu(applicationContext))
+//                .addView(DrawerMenuHeader(applicationContext, DrawerMenuHeader.DRAWER_MENU_HEADER_ITEM_ATALHOS))
+//                .addView(DrawerMenuHeader(applicationContext, DrawerMenuHeader.DRAWER_MENU_HEADER_ITEM_INFORMACOES))
+//                .addView(DrawerMenuHeader(applicationContext, DrawerMenuHeader.DRAWER_MENU_HEADER_ITEM_CONFIGURACOES))
 
         // toolbar cast como View
         val drawerToggle: ActionBarDrawerToggle = object :
@@ -73,25 +89,7 @@ class MainActivity : AppCompatActivity() {
         drawer.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
     }
-        setContentView(R.layout.activity_main)
-        // Set up the login form.
-        mEmailView = findViewById<View>(R.id.email) as AutoCompleteTextView
 
-        mPasswordView = findViewById<View>(R.id.password) as EditText
-        mPasswordView!!.setOnEditorActionListener(TextView.OnEditorActionListener { textView, id, keyEvent ->
-            if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
-                attemptLogin()
-                return@OnEditorActionListener true
-            }
-            false
-        })
-
-        val mEmailSignInButton = findViewById<View>(R.id.email_sign_in_button) as Button
-        mEmailSignInButton.setOnClickListener { attemptLogin() }
-
-        mLoginFormView = findViewById(R.id.login_form)
-        mProgressView = findViewById(R.id.login_progress)
-    }
 
     /**
      * Attempts to sign in or register the account specified by the login form.

@@ -32,8 +32,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     // Dependências adicionadas posteriormente
-    compile 'com.mindorks:placeholderview:0.2.7'
+    implementation 'com.mindorks:placeholderview:0.2.7'
     implementation 'com.android.support:animated-vector-drawable:26.1.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.diegodobelo.expandingview:expanding-view:0.9.3'
 
 }

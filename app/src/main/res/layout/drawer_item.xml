@@ -6,13 +6,9 @@
     android:orientation="horizontal"
     android:gravity="center|left"
     android:paddingLeft="20dp">
-    <ImageView
-        android:id="@+id/itemIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_email_black_18dp"/>
+
     <TextView
-        android:id="@+id/itemNameTxt"
+        android:id="@+id/drawerItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimaryDark"
