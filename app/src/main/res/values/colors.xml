@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="background_menu_content">#FFFFFF</color>
-    <color name="cor_texto">#434343</color>]
+    <color name="cor_texto">#434343</color>
+    <color name="submenu_atalho_background">#fee29b</color>
+    <color name="submenu_informacoes_background">#cfe9e5</color>
+    <color name="submenu_configuracoes_background">#E6E7E8</color>
 
 </resources>

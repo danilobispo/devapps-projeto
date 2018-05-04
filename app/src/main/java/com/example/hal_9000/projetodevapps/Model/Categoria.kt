@@ -4,12 +4,13 @@ import android.app.Fragment
 import android.graphics.drawable.Drawable
 
 /**
- * Created by HAL-9000 on 27/04/2018.
- */
+* Created by Danilo José Bispo Galvão on 27/04/2018.
+*/
 
 class Categoria(
         var nome: String?,
         var icone: Drawable?,
-        var subcategoriaArrayList: ArrayList<Subcategoria>) {
+        var subcategoriaArrayList: ArrayList<Subcategoria>,
+        var backgroundColor: Int?) {
 
 }

@@ -1,8 +1,11 @@
 package com.example.hal_9000.projetodevapps.Model
 
-/**
- * Created by HAL-9000 on 27/04/2018.
- */
+import android.app.Fragment
+import java.lang.ref.PhantomReference
 
-class Subcategoria(var nome: String) {
+/**
+* Created by Danilo José Bispo Galvão on 27/04/2018.
+*/
+
+class Subcategoria(var nome: String, var fragmentReference: Fragment?) {
 }

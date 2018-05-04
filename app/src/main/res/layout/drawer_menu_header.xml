@@ -5,7 +5,6 @@
     android:id="@+id/drawerMenuHeader"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:background="@color/background_menu_content"
     android:gravity="center|left">
 
     <ImageView
@@ -23,7 +22,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:background="@color/background_menu_content"
         android:text="Menu Item"
         android:textColor="@color/cor_texto"
         android:textSize="14sp"

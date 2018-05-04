@@ -1,17 +1,23 @@
 package com.example.hal_9000.projetodevapps
 
+import android.app.Activity
+import android.app.Fragment
+import android.app.FragmentTransaction
 import android.content.Context
+import android.content.Intent
+import android.graphics.Color
+import android.support.constraint.ConstraintLayout
+import android.support.v4.app.FragmentActivity
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseExpandableListAdapter
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import com.example.hal_9000.projetodevapps.Model.Categoria
 
 /**
- * Created by HAL-9000 on 03/05/2018.
- */
+* Created by Danilo José Bispo Galvão on 03/05/2018.
+*/
 
 class AdapterExpandableListView(
         val context: Context,
@@ -37,8 +43,10 @@ class AdapterExpandableListView(
         // Instância dos objetos da view
         val iconeGrupo = view.findViewById<ImageView>(R.id.drawerMenuHeader_itemIcon)
         val textoGrupo = view.findViewById<TextView>(R.id.drawerMenuHeader_itemNameTxt)
+        val corBackgroundGrupo = view.findViewById<ConstraintLayout>(R.id.drawerMenuHeader)
 
-        iconeGrupo.setImageDrawable(categoriaList[groupPosition].icone)
+        corBackgroundGrupo.setBackgroundColor(ContextCompat.getColor(context, grupo.backgroundColor!!))
+        iconeGrupo.setImageDrawable(grupo.icone)
         textoGrupo.text = grupo.nome
 
         return view
@@ -57,11 +65,24 @@ class AdapterExpandableListView(
     }
 
     override fun getChildView(groupPosition: Int, childPosition: Int, isLastChild: Boolean, convertView: View?, parent: ViewGroup?): View {
-        val subcategoriaText = categoriaList[groupPosition].subcategoriaArrayList[childPosition]
+        val subcategoria = categoriaList[groupPosition].subcategoriaArrayList[childPosition]
         val view: View = LayoutInflater.from(context).inflate(R.layout.drawer_item, parent, false)
 
         val subcatTextView: TextView = view.findViewById(R.id.drawerItemText)
-        subcatTextView.text = subcategoriaText.nome
+        subcatTextView.text = subcategoria.nome
+        view.setOnClickListener({
+            Toast.makeText(context, subcategoria.nome, Toast.LENGTH_LONG).show()
+            if(subcategoria.fragmentReference != null){
+                Toast.makeText(context, "AAAAA", Toast.LENGTH_LONG).show()
+                subcategoria.fragmentReference = Fragment()
+                    val activityContext = context as Activity
+                    val fragManager = activityContext.fragmentManager.beginTransaction()
+                    fragManager.replace(R.id.content_frame, subcategoria.fragmentReference)
+                    fragManager.addToBackStack(null).commit()
+            }
+        })
+
+
         return view
     }
 

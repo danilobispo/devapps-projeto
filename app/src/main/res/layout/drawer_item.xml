@@ -3,16 +3,14 @@
     android:id="@+id/mainView"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:orientation="horizontal"
-    android:gravity="center|left"
-    android:paddingLeft="20dp">
+    android:gravity="center|left">
 
     <TextView
         android:id="@+id/drawerItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/cor_texto"
         android:text="Menu Item"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:textSize="14sp" />
 </LinearLayout>
