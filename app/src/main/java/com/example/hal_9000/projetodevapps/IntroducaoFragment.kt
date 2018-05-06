@@ -18,19 +18,6 @@ class IntroducaoFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val rootView = inflater!!.inflate(R.layout.introducao_fragment, container, false)
 
-        button_int_adotar.setOnClickListener {
-
-        }
-
-        button_int_ajudar.setOnClickListener {
-            // Handler code here.
-
-        }
-
-        button_int_cadastrar.setOnClickListener {
-            // Handler code here.
-
-        }
         return rootView
     }
 }
