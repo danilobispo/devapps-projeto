@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="178dp"
-    android:orientation="vertical"
-    android:background="@color/drawer_primary_color"
-    android:paddingLeft="30dp">
-    <ImageView
-        android:id="@+id/profileImageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_perm_identity_black_48dp"
-        android:layout_gravity="left|top"
-        android:layout_marginTop="55dp" />
-    <TextView
-        android:id="@+id/nameTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/cor_texto"
-        android:textSize="14sp"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"/>
-</LinearLayout>
+    android:layout_height="160dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/drawer_primary_color"
+        android:orientation="vertical"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="55dp"
+            android:src="@drawable/ic_perm_identity_black_48dp" />
+
+    </RelativeLayout>
+</ScrollView>

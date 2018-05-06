@@ -5,6 +5,7 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context="com.example.hal_9000.projetodevapps.MainActivity">
 
     <RelativeLayout
@@ -35,19 +36,14 @@
         </android.support.design.widget.CoordinatorLayout>
     </RelativeLayout>
 
-    <FrameLayout
-        android:layout_width="250dp"
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="235dp"
         android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:background="@android:color/white"
-        android:scrollbars="none">
-
-        <com.mindorks.placeholderview.PlaceHolderView
-            android:id="@+id/drawerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFFFFF"
-            android:scrollbars="none"/>
-    </FrameLayout>
+        android:layout_gravity="left|start"
+        android:background="#FFFFFF"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />
 
 </android.support.v4.widget.DrawerLayout>

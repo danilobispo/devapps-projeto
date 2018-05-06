@@ -11,12 +11,12 @@ import android.widget.*
 import com.example.hal_9000.projetodevapps.Model.Categoria
 
 /**
-* Created by Danilo José Bispo Galvão on 03/05/2018.
-*/
+ * Created by Danilo José Bispo Galvão on 03/05/2018.
+ */
 
 class AdapterExpandableListView(
-        val context: Context,
-        val categoriaList: ArrayList<Categoria>) : BaseExpandableListAdapter() {
+    val context: Context,
+    val categoriaList: ArrayList<Categoria>) : BaseExpandableListAdapter() {
 
 
     override fun getGroup(groupPosition: Int): Any {
@@ -34,16 +34,29 @@ class AdapterExpandableListView(
     override fun getGroupView(groupPosition: Int, isExpanded: Boolean, convertView: View?, parent: ViewGroup?): View {
         val grupo = categoriaList[groupPosition]
         val view: View = LayoutInflater.from(context).inflate(R.layout.drawer_menu_header, parent, false)
-
-        // Instância dos objetos da view
         val iconeGrupo = view.findViewById<ImageView>(R.id.drawerMenuHeader_itemIcon)
         val textoGrupo = view.findViewById<TextView>(R.id.drawerMenuHeader_itemNameTxt)
         val corBackgroundGrupo = view.findViewById<ConstraintLayout>(R.id.drawerMenuHeader)
+        val dropdownBotaoGrupo = view.findViewById<ImageView>(R.id.drawerMenuHeader_dropdown)
 
+        // Instância dos objetos da view
         corBackgroundGrupo.setBackgroundColor(ContextCompat.getColor(context, grupo.backgroundColor!!))
-        iconeGrupo.setImageDrawable(grupo.icone)
+        iconeGrupo.setImageDrawable(grupo?.icone)
         textoGrupo.text = grupo.nome
+        if (groupPosition == 0) {
+            var params = dropdownBotaoGrupo.layoutParams as ConstraintLayout.LayoutParams
+            params.leftMargin = 150
 
+        } else {
+            iconeGrupo.visibility = View.VISIBLE
+        }
+
+
+        if (isExpanded) {
+            dropdownBotaoGrupo.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_arrow_drop_up_black_24dp))
+        } else {
+            dropdownBotaoGrupo.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_arrow_drop_down_black_24dp))
+        }
         return view
     }
 
@@ -67,11 +80,11 @@ class AdapterExpandableListView(
         subcatTextView.text = subcategoria.nome
         view.setOnClickListener({
             Toast.makeText(context, subcategoria.nome, Toast.LENGTH_LONG).show()
-            if(subcategoria.fragmentReference != null){
-                    val activityContext = context as Activity
-                    val fragManager = activityContext.fragmentManager.beginTransaction()
-                    fragManager.replace(R.id.content_frame, subcategoria.fragmentReference)
-                    fragManager.addToBackStack(null).commit()
+            if (subcategoria.fragmentReference != null) {
+                val activityContext = context as Activity
+                val fragManager = activityContext.fragmentManager.beginTransaction()
+                fragManager.replace(R.id.content_frame, subcategoria.fragmentReference)
+                fragManager.addToBackStack(null).commit()
             }
         })
 
