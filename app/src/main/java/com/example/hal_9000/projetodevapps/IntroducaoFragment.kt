@@ -15,13 +15,6 @@ import android.widget.Toast
 class IntroducaoFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val rootView = inflater!!.inflate(R.layout.introducao_fragment, container, false)
-            val botaoTeste = rootView.findViewById<Button>(R.id.button_teste)
-            botaoTeste.setOnClickListener({
-                val text = "Hello toast!"
-                val duration = Toast.LENGTH_SHORT
-                val toast = Toast.makeText(rootView.context, text, duration)
-                toast.show()
-            })
 
         return rootView
     }

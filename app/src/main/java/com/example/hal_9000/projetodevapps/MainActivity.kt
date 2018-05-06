@@ -8,6 +8,9 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import android.app.ProgressDialog
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setupDrawer()
         setupFragment()
+
+
     }
 
     fun setupDrawer() {
@@ -40,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setupFragment() {
-        this.fragmentManager.beginTransaction().replace(R.id.content_frame, LoginFragment())
+        this.fragmentManager.beginTransaction().replace(R.id.content_frame, IntroducaoFragment())
             .addToBackStack(null).commit()
     }
 

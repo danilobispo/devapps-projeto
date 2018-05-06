@@ -6,11 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".LoginFragment">
 
-    <Button
-        android:id="@+id/button_teste"
+    <TextView
+        android:id="@+id/text_int_ola"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginTop="56dp"
+        android:fontFamily="courgette_regular"
+        android:text="@string/ola"
+        android:textColor="@color/theme_yellow"
+        android:textSize="72dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_int_boas_vindas"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/theme_gray_75"
+        android:textAlignment="center"
+        android:text="@string/boas_vindas"
+        app:layout_constraintTop_toBottomOf="@+id/text_int_ola"
+        android:layout_marginTop="52dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button_int_adotar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/theme_gray_43"
+        android:backgroundTint="@color/theme_yellow"
+        android:fontFamily="@font/roboto"
+        android:text="@string/adotar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_int_boas_vindas" />
+
+    <Button
+        android:id="@+id/button_int_ajudar"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/theme_gray_43"
+        android:backgroundTint="@color/theme_yellow"
+        android:fontFamily="@font/roboto"
+        android:text="@string/ajudar"
+        app:layout_constraintTop_toBottomOf="@+id/button_int_adotar"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button_int_cadastrar"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/theme_gray_43"
+        android:backgroundTint="@color/theme_yellow"
+        android:fontFamily="@font/roboto"
+        android:text="@string/cadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/button_int_ajudar"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_int_login"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/login"
+        app:layout_constraintTop_toBottomOf="@+id/button_int_cadastrar"
+        android:layout_marginTop="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
 </android.support.constraint.ConstraintLayout>
