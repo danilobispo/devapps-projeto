@@ -33,24 +33,20 @@ class AdapterExpandableListView(
 
     override fun getGroupView(groupPosition: Int, isExpanded: Boolean, convertView: View?, parent: ViewGroup?): View {
         val grupo = categoriaList[groupPosition]
-        val view: View = LayoutInflater.from(context).inflate(R.layout.drawer_menu_header, parent, false)
-        val iconeGrupo = view.findViewById<ImageView>(R.id.drawerMenuHeader_itemIcon)
+        var view: View = LayoutInflater.from(context).inflate(R.layout.drawer_menu_header, parent, false)
+        var iconeGrupo: ImageView? = view.findViewById<ImageView>(R.id.drawerMenuHeader_itemIcon)
+        if (groupPosition == 0) {
+            view = LayoutInflater.from(context).inflate(R.layout.drawer_menu_header_cat_login, parent, false)
+            iconeGrupo = null
+        }
         val textoGrupo = view.findViewById<TextView>(R.id.drawerMenuHeader_itemNameTxt)
         val corBackgroundGrupo = view.findViewById<ConstraintLayout>(R.id.drawerMenuHeader)
         val dropdownBotaoGrupo = view.findViewById<ImageView>(R.id.drawerMenuHeader_dropdown)
 
         // Instância dos objetos da view
         corBackgroundGrupo.setBackgroundColor(ContextCompat.getColor(context, grupo.backgroundColor!!))
-        iconeGrupo.setImageDrawable(grupo?.icone)
+        iconeGrupo?.setImageDrawable(grupo.icone)
         textoGrupo.text = grupo.nome
-        if (groupPosition == 0) {
-            var params = dropdownBotaoGrupo.layoutParams as ConstraintLayout.LayoutParams
-            params.leftMargin = 150
-
-        } else {
-            iconeGrupo.visibility = View.VISIBLE
-        }
-
 
         if (isExpanded) {
             dropdownBotaoGrupo.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_arrow_drop_up_black_24dp))

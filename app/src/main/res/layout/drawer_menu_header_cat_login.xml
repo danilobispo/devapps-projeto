@@ -7,27 +7,17 @@
     android:layout_height="50dp"
     android:gravity="center|left">
 
-    <ImageView
-        android:id="@+id/drawerMenuHeader_itemIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:src="@drawable/ic_email_black_18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/drawerMenuHeader_itemNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="24dp"
+        android:maxLength="20"
         android:text="Menu Item"
         android:textColor="@color/cor_texto"
         android:textSize="14sp"
-        android:maxLength="20"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/drawerMenuHeader_itemIcon"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.516" />
 
@@ -36,15 +26,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="160dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:padding="0dp"
         android:src="@drawable/ic_arrow_drop_down_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintLeft_toLeftOf="@id/drawerMenuHeader_itemIcon"
-        app:layout_constraintStart_toEndOf="@+id/drawerMenuHeader_itemIcon"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

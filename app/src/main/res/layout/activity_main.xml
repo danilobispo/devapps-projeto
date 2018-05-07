@@ -44,6 +44,7 @@
         android:background="#FFFFFF"
         android:dividerHeight="0dp"
         android:divider="@null"
+        android:groupIndicator="@null"
         android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />
 
 </android.support.v4.widget.DrawerLayout>
