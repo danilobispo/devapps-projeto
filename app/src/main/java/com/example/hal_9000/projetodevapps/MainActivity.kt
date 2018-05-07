@@ -17,19 +17,18 @@ import android.widget.PopupMenu
 import com.example.hal_9000.projetodevapps.Model.Categoria
 import com.example.hal_9000.projetodevapps.Model.Subcategoria
 import kotlinx.android.synthetic.main.activity_main.*
+import android.app.ProgressDialog
 import kotlinx.android.synthetic.main.drawer_header.*
 
 import kotlinx.android.synthetic.main.drawer_header.view.*
 
 class MainActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupMenu()
         setupFragment()
-
     }
 
     fun setupMenu() {
@@ -61,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setupFragment() {
-        this.fragmentManager.beginTransaction().replace(R.id.content_frame, LoginFragment())
+        this.fragmentManager.beginTransaction().replace(R.id.content_frame, IntroducaoFragment())
             .addToBackStack(null).commit()
     }
 
