@@ -5,21 +5,12 @@ import android.graphics.drawable.Drawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
-
-
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
 import android.view.View
-import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.ListView
-import android.widget.PopupMenu
 import com.example.hal_9000.projetodevapps.Model.Categoria
 import com.example.hal_9000.projetodevapps.Model.Subcategoria
 import kotlinx.android.synthetic.main.activity_main.*
-import android.app.ProgressDialog
-import kotlinx.android.synthetic.main.drawer_header.*
-
 import kotlinx.android.synthetic.main.drawer_header.view.*
 
 class MainActivity : AppCompatActivity() {
