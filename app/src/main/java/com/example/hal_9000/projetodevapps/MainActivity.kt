@@ -1,5 +1,6 @@
 package com.example.hal_9000.projetodevapps
 
+import android.app.Fragment
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.support.v7.app.AppCompatActivity
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setupFragment() {
-        this.fragmentManager.beginTransaction().replace(R.id.content_frame, IntroducaoFragment())
+        this.supportFragmentManager.beginTransaction().replace(R.id.content_frame, IntroducaoFragment())
             .addToBackStack(null).commit()
     }
 
@@ -80,8 +81,8 @@ class MainActivity : AppCompatActivity() {
         val subcategoriaAtalhos = ArrayList<Subcategoria>()
         //TODO: Inserir referências para fragments
         subcategoriaAtalhos.add(Subcategoria("Cadastrar um pet", null))
-        subcategoriaAtalhos.add(Subcategoria("Adotar um pet", null))
-        subcategoriaAtalhos.add(Subcategoria("Ajudar um pet", null))
+        subcategoriaAtalhos.add(Subcategoria("Adotar um pet", AdotarFragment()))
+        subcategoriaAtalhos.add(Subcategoria("Ajudar um pet", AjudarFragment()))
         subcategoriaAtalhos.add(Subcategoria("Apadrinhar um pet", null))
         val categoriaAtalhos = Categoria(
             "Atalhos",

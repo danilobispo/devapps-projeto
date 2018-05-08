@@ -1,8 +1,9 @@
 package com.example.hal_9000.projetodevapps
 
-import android.app.Fragment
+
 import android.os.AsyncTask
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
@@ -107,7 +108,7 @@ class LoginFragment : Fragment() {
             infoExtra.putString("key", email)
             val fragIntroducaoFragment = IntroducaoFragment()
             fragIntroducaoFragment.arguments = infoExtra
-            this.fragmentManager.beginTransaction()
+            activity.supportFragmentManager.beginTransaction()
                 .replace(R.id.content_frame, fragIntroducaoFragment)
                 .addToBackStack(null).commit()
         }

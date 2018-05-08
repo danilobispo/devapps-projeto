@@ -1,6 +1,6 @@
 package com.example.hal_9000.projetodevapps.Model
 
-import android.app.Fragment
+import android.support.v4.app.Fragment
 import java.lang.ref.PhantomReference
 
 /**

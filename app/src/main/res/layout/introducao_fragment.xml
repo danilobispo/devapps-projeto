@@ -44,7 +44,7 @@
             android:backgroundTint="@color/theme_yellow"
             android:fontFamily="@font/roboto"
             android:text="@string/adotar"
-            android:textColor="@color/theme_gray_43"
+            android:textColor="@color/cor_texto"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_int_boas_vindas" />
@@ -57,7 +57,7 @@
             android:backgroundTint="@color/theme_yellow"
             android:fontFamily="@font/roboto"
             android:text="@string/ajudar"
-            android:textColor="@color/theme_gray_43"
+            android:textColor="@color/cor_texto"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_int_adotar" />
@@ -70,7 +70,7 @@
             android:backgroundTint="@color/theme_yellow"
             android:fontFamily="@font/roboto"
             android:text="@string/cadastrar"
-            android:textColor="@color/theme_gray_43"
+            android:textColor="@color/cor_texto"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_int_ajudar" />

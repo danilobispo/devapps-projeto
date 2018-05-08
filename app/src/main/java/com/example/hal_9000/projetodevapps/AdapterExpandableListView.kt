@@ -1,14 +1,16 @@
 package com.example.hal_9000.projetodevapps
 
-import android.app.Activity
+
 import android.content.Context
 import android.support.constraint.ConstraintLayout
+import android.support.v4.app.FragmentActivity
 import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.example.hal_9000.projetodevapps.Model.Categoria
+import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * Created by Danilo José Bispo Galvão on 03/05/2018.
@@ -77,10 +79,12 @@ class AdapterExpandableListView(
         view.setOnClickListener({
             Toast.makeText(context, subcategoria.nome, Toast.LENGTH_LONG).show()
             if (subcategoria.fragmentReference != null) {
-                val activityContext = context as Activity
-                val fragManager = activityContext.fragmentManager.beginTransaction()
+                val activityContext = context as FragmentActivity
+                val fragManager = activityContext.supportFragmentManager.beginTransaction()
                 fragManager.replace(R.id.content_frame, subcategoria.fragmentReference)
                 fragManager.addToBackStack(null).commit()
+                // fecha o menu
+                fechaMenu(activityContext)
             }
         })
 
@@ -94,6 +98,10 @@ class AdapterExpandableListView(
 
     override fun getGroupCount(): Int {
         return categoriaList.size
+    }
+
+    fun fechaMenu(parent: FragmentActivity){
+        parent.drawer.closeDrawers()
     }
 
 }
