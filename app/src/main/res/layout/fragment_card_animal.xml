@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="290dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:id="@+id/card_pet"
+    >
+    <android.support.constraint.ConstraintLayout
+        card_view:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/card_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="#fee39b">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/nome"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="18dp"/>
+
+            <ImageView
+                android:id="@+id/card_likeIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_email_black_18dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                />
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/imagem_pet"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            card_view:layout_constraintTop_toBottomOf="@id/card_toolbar"
+            />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/container_string"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:paddingTop="5dp"
+            card_view:layout_constraintTop_toBottomOf="@id/imagem_pet">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="13dp"
+                card_view:layout_constraintTop_toTopOf="@id/container_string"
+                card_view:layout_constraintStart_toStartOf="@id/container_string"
+                card_view:layout_constraintEnd_toStartOf="@id/idade"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/idade"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="13dp"
+                card_view:layout_constraintTop_toTopOf="@id/container_string"
+                card_view:layout_constraintStart_toEndOf="@id/sexo"
+                card_view:layout_constraintEnd_toStartOf="@id/porte"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/porte"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="13dp"
+                card_view:layout_constraintTop_toTopOf="@id/container_string"
+                card_view:layout_constraintStart_toEndOf="@id/idade"
+                card_view:layout_constraintEnd_toEndOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/localizaçao"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="13dp"
+            card_view:layout_constraintTop_toBottomOf="@id/container_string"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
