@@ -59,8 +59,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
         View contactView = inflater.inflate(R.layout.fragment_card_animal, parent, false);
 
         // Return a new holder instance
-        ViewHolder viewHolder = new ViewHolder(contactView);
-        return viewHolder;
+        return new ViewHolder(contactView);
     }
 
     @Override
@@ -73,16 +72,16 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
         nome.setText(animal.getName());
 
         android.support.v7.widget.AppCompatTextView porte = holder.porte;
-        nome.setText(animal.getPorte());
+        porte.setText(animal.getPorte());
 
         android.support.v7.widget.AppCompatTextView sexo = holder.sexo;
-        nome.setText(animal.getSexo());
+        sexo.setText(animal.getSexo());
 
         android.support.v7.widget.AppCompatTextView idade = holder.idade;
-        nome.setText(animal.getIdade());
+        idade.setText(Integer.toString(animal.getIdade()));
 
         android.support.v7.widget.AppCompatTextView localizacao = holder.localizacao;
-        nome.setText(animal.getLocalizacao());
+        localizacao.setText(animal.getLocalizacao());
 
         ImageView imagem = holder.imagem;
         imagem.setImageURI(animal.getImagem_uri());
@@ -91,7 +90,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mAnimais.size();
     }
 
 

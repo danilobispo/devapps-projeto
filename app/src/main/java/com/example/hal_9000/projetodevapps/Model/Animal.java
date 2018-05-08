@@ -11,7 +11,7 @@ public class Animal {
     private String especie;
     private String sexo;
     private String porte;
-    private Integer idade;
+    private int idade;
     private Uri imagem_uri;
     private String localizacao;
     private ArrayList<String> temperamento;
@@ -59,11 +59,11 @@ public class Animal {
         this.porte = porte;
     }
 
-    public Integer getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 
