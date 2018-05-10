@@ -32,8 +32,9 @@
     <string name="boas_vindas">Bem vindo ao Meau!\nAqui você pode adotar, doar e ajudar\ncães e gatos com facilidade.\nQual o seu interesse?</string>
     <string name="login">login</string>
 
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, has id invidunt iracundia. Admodum perfecto pri in, eum quot pericula percipitur cu. Accusam perfecto gloriatur id vis, nec ad soluta gubergren vulputate, malis vitae verterem an qui. Nostro mentitum ne nam, pro quod persius sanctus at, facilisis incorrupte mel ne. Ut usu tantas salutandi, et eum animal ponderum invenire, et putant meliore eam.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
 </resources>
