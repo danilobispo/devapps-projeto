@@ -1,16 +1,24 @@
 package com.example.hal_9000.projetodevapps.adapters;
 
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.example.hal_9000.projetodevapps.DetalheAnimalFragment;
 import com.example.hal_9000.projetodevapps.Model.Animal;
 import com.example.hal_9000.projetodevapps.R;
 
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder> {
 
@@ -19,6 +27,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         // Your holder should contain a member variable
         // for any view that will be set as you render a row
+
         public android.support.v7.widget.AppCompatTextView nome;
         public android.support.v7.widget.AppCompatTextView porte;
         public android.support.v7.widget.AppCompatTextView sexo;
@@ -29,7 +38,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
 
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each subview
-        public ViewHolder(View itemView) {
+        public ViewHolder(final View itemView) {
             // Stores the itemView in a public final member variable that can be used
             // to access the context from any ViewHolder instance.
             super(itemView);
@@ -40,6 +49,23 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
             idade = (android.support.v7.widget.AppCompatTextView) itemView.findViewById(R.id.idade);
             localizacao = (android.support.v7.widget.AppCompatTextView) itemView.findViewById(R.id.localizaçao);
             imagem = (ImageView) itemView.findViewById(R.id.imagem_pet);
+
+            itemView.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    int pos = getAdapterPosition();
+                    // check if item still exists
+                    if(pos != RecyclerView.NO_POSITION){
+                        Animal clickedItem = mAnimais.get(pos);
+
+                        //TODO carregar fragment detalhe animal com valor de clickedItem aqui
+                        Toast.makeText(v.getContext(), "You clicked " + clickedItem.getName(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+
         }
     }
 
