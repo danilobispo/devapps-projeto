@@ -1,9 +1,12 @@
 package com.example.hal_9000.projetodevapps.adapters;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.hal_9000.projetodevapps.AdotarFragment;
+import com.example.hal_9000.projetodevapps.AjudarFragment;
 import com.example.hal_9000.projetodevapps.DetalheAnimalFragment;
 import com.example.hal_9000.projetodevapps.Model.Animal;
 import com.example.hal_9000.projetodevapps.R;
@@ -60,8 +65,13 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
                     if(pos != RecyclerView.NO_POSITION){
                         Animal clickedItem = mAnimais.get(pos);
 
-                        //TODO carregar fragment detalhe animal com valor de clickedItem aqui
-                        Toast.makeText(v.getContext(), "You clicked " + clickedItem.getName(), Toast.LENGTH_SHORT).show();
+                        AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                        Fragment myFragment = new DetalheAnimalFragment();
+
+                        Bundle arguments = new Bundle();
+                        arguments.putSerializable( "animal" , clickedItem);
+                        myFragment.setArguments(arguments);
+                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, myFragment).addToBackStack(null).commit();
                     }
                 }
             });

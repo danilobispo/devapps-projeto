@@ -2,9 +2,10 @@ package com.example.hal_9000.projetodevapps.Model;
 
 import android.net.Uri;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Animal {
+public class Animal implements Serializable {
 
     private String categoria;
     private String name;
