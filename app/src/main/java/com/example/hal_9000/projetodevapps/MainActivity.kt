@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         val subcategoriaInformacoes = ArrayList<Subcategoria>()
         //TODO: Inserir referências para fragments
         subcategoriaInformacoes.add(Subcategoria("Dicas", null))
-        subcategoriaInformacoes.add(Subcategoria("Eventos", null))
+        subcategoriaInformacoes.add(Subcategoria("Eventos", EventosFragment()))
         subcategoriaInformacoes.add(Subcategoria("Legislação", LegislacaoFragment()))
         subcategoriaInformacoes.add(Subcategoria("Termo de adoção", null))
         subcategoriaInformacoes.add(Subcategoria("Histórias de adoção", null))
