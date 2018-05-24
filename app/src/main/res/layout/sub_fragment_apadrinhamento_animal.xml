@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_exigencias_para_apadrinhamento"
+        android:textAllCaps="true"
+        android:textColor="@color/theme_yellow_text" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/termoDeApadrinhamentoOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_termo_de_apadrinhamento" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/auxilioFinanceiroApadrinhamentoOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_auxilio_financeiro" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/alimentacaoOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/str_alimentacao" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/saudeOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/str_saude" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/ObjetosApadrinhamentoOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/str_objetos" />
+        </LinearLayout>
+    </RelativeLayout>
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/visitasAoAnimalOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_visitas_ao_animal" />
+
+</LinearLayout>

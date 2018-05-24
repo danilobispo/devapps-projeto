@@ -24,6 +24,9 @@ class IntroducaoFragment: Fragment() {
         rootView.button_int_ajudar.setOnClickListener({
             callAjudar()
         })
+        rootView.button_int_cadastrar.setOnClickListener({
+            callCadastrarAnimal()
+        })
         return rootView
     }
 
@@ -35,5 +38,10 @@ class IntroducaoFragment: Fragment() {
     fun callAjudar() {
         activity.supportFragmentManager.beginTransaction()
             .replace(R.id.content_frame, AjudarFragment()).commit()
+    }
+
+    fun callCadastrarAnimal() {
+        activity.supportFragmentManager.beginTransaction()
+            .replace(R.id.content_frame, CadastroAnimalFragment()).commit()
     }
 }

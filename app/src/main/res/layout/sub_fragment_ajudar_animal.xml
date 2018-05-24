@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_necessidades_do_animal"
+        android:textAllCaps="true"
+        android:textColor="@color/theme_yellow_text" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/alimentoOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_alimento" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/auxilioFinanceiroAjudarOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_auxilio_financeiro" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/medicamentoOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_medicamento" />
+
+    <EditText
+        android:id="@+id/etNomeMedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:hint="@string/str_nome_do_medicamento"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/ObjetosAjudarOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_objetos" />
+
+    <EditText
+        android:id="@+id/etEspecifiqueObjetos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:hint="@string/str_especifique_os_objetos"
+        />
+
+</LinearLayout>

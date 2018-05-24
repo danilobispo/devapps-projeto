@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/theme_yellow_text"
+        android:text="@string/str_exigencias_adocao"
+        android:textAllCaps="true" />
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/termoDeAdocaoOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_termo_de_adocao" />
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/fotosDaCasaOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_fotos_da_casa" />
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/visitaPreviaAoAnimalOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_visita_previa_ao_animal" />
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/acompanhamentoPosAdocaoOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_acompanhamento_pos_adocao" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/umMesOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_1_mes"
+                android:enabled="false" />
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/tresMesesOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_3_meses"
+                android:enabled="false"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/seisMesesOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_6_meses"
+                android:enabled="false"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
