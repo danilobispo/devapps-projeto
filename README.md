@@ -1,2 +1,2 @@
 # devapps-projeto
-Projeto da disciplina de Desenvolvimento de Aplicativos
+Projeto da disciplina de Desenvolvimento de Aplicativos 
