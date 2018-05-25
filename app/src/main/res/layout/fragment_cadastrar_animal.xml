@@ -371,29 +371,31 @@
                 android:text="@string/str_sobre_o_animal"
                 android:textAllCaps="true" />
             <EditText
+                android:id="@+id/etSobreOAnimal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/str_compartilhe_a_historia_do_animal"
                 android:textSize="14sp" />
         </LinearLayout>
+
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
-        <Button
-            android:id="@+id/btCadastrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/theme_yellow"
-            android:text="@string/str_colocar_para_adocao"
-            android:textAllCaps="true"
-            android:gravity="center_vertical|center_horizontal" />
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/btCadastrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/theme_yellow"
+                android:gravity="center_vertical"
+                android:text="@string/str_colocar_para_adocao"
+                android:textAllCaps="true" />
+
         </RelativeLayout>
     </LinearLayout>
-
-
-
-
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
