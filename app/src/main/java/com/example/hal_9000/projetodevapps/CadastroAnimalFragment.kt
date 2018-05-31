@@ -24,6 +24,8 @@ class CadastroAnimalFragment : Fragment() {
             "Por favor, selecione pelo menos uma das 3 opções para continuar",
             Toast.LENGTH_LONG).show()
 
+        viewRoot.btCadastrar.background.setColorFilter(ContextCompat.getColor(context, R.color.theme_yellow_text), PorterDuff.Mode.MULTIPLY)
+
         viewRoot.btAdocao.setOnCheckedChangeListener(trocarCorEFragment(viewRoot, SubFragmentAdocaoAnimal(), getString(R.string.str_colocar_para_adocao)))
         viewRoot.btApadrinhar.setOnCheckedChangeListener(trocarCorEFragment(viewRoot, SubFragmentApadrinhamentoAnimal(), getString(R.string.str_procurar_padrinho)))
         viewRoot.btAjudar.setOnCheckedChangeListener(trocarCorEFragment(viewRoot, SubFragmentAjudarAnimal(), getString(R.string.str_procurar_ajuda)))
@@ -97,6 +99,7 @@ class CadastroAnimalFragment : Fragment() {
                     it.toggle() // Reverte para unchecked, para evitar bugs
                 }
             } else {
+
                 it.background.clearColorFilter()
                 if (fragmentRef.isVisible) {
                     childFragmentManager.beginTransaction().remove(fragmentRef).commitNow()
@@ -111,6 +114,6 @@ class CadastroAnimalFragment : Fragment() {
     }
 
     private fun realizarCadastro() {
-
+        // TODO: Realizar cadastro do animal no firebase daqui
     }
 }
