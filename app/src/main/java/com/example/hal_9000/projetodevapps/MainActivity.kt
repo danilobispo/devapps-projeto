@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupMenu()
-        setupFragment()
+        setupFragment(savedInstanceState)
     }
 
     fun setupMenu() {
@@ -51,9 +51,12 @@ class MainActivity : AppCompatActivity() {
         drawerToggle.syncState()
     }
 
-    fun setupFragment() {
-        this.supportFragmentManager.beginTransaction().replace(R.id.content_frame, IntroducaoFragment())
-            .addToBackStack(null).commit()
+    fun setupFragment(savedInstanceState: Bundle?) {
+        if (savedInstanceState == null) {
+            this.supportFragmentManager.beginTransaction().replace(R.id.content_frame, IntroducaoFragment())
+                .addToBackStack(null).commit()
+        }
+
     }
 
     fun setupDrawerHeader(drawerHeader: View, fotoDeUsuario: Drawable?){
