@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.hal_9000.projetodevapps.Model.FragmentEnums
 import kotlinx.android.synthetic.main.sub_fragment_apadrinhamento_animal.view.*
 
 /**
@@ -14,9 +13,8 @@ import kotlinx.android.synthetic.main.sub_fragment_apadrinhamento_animal.view.*
 class SubFragmentApadrinhamentoAnimal: Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val rootView = inflater!!.inflate(R.layout.sub_fragment_apadrinhamento_animal, container, false)
-        rootView.tag = FragmentEnums.APADRINHAR
         rootView.auxilioFinanceiroApadrinhamentoOption.setOnCheckedChangeListener{buttonView, isChecked ->
-            if(buttonView.isChecked){
+            if(isChecked){
                 rootView.alimentacaoOption.isEnabled = true
                 rootView.saudeOption.isEnabled = true
                 rootView.ObjetosApadrinhamentoOption.isEnabled = true

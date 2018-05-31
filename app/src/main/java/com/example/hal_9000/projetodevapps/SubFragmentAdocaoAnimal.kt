@@ -5,8 +5,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CompoundButton
-import com.example.hal_9000.projetodevapps.Model.FragmentEnums
 import kotlinx.android.synthetic.main.sub_fragment_adocao_animal.view.*
 
 /**
@@ -15,9 +13,8 @@ import kotlinx.android.synthetic.main.sub_fragment_adocao_animal.view.*
 class SubFragmentAdocaoAnimal: Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater!!.inflate(R.layout.sub_fragment_adocao_animal, container, false)
-        rootView.tag = FragmentEnums.ADOTAR
         rootView.acompanhamentoPosAdocaoOption.setOnCheckedChangeListener{ buttonView, isChecked ->
-            if(buttonView.isChecked){
+            if(isChecked){
                 rootView.umMesOption.isEnabled = true
                 rootView.tresMesesOption.isEnabled = true
                 rootView.seisMesesOption.isEnabled = true
