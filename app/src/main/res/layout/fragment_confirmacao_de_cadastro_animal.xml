@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="52dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/textoEbaCadastroAnimal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/str_eba_confirmacao_cadastro_animal" />
+    <TextView
+        android:layout_marginLeft="52dp"
+        android:layout_marginRight="52dp"
+        android:textColor="@color/theme_gray_75"
+        android:id="@+id/textoConfirmacaoCadastroAnimal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/str_confirmacao_cadastro_animal"
+        android:textSize="14sp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btMeusPets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_meus_pets"/>
+
+</LinearLayout>

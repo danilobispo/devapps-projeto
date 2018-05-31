@@ -102,5 +102,9 @@
     <string name="str_colocar_para_adocao">Colocar para adoção</string>
     <string name="str_procurar_ajuda">Procurar ajuda</string>
     <string name="str_procurar_padrinho">Procurar padrinho</string>
+    <string name="str_eba_confirmacao_cadastro_animal">Eba!</string>
+    <string name="str_confirmacao_cadastro_animal">O cadastro do seu pet foi realizado com sucesso!\n\nCertifique-se que permitiu o envio de notificações por push no campo privacidade do menu configurações do aplicativo. Assim, poderemos te avisar assim que alguém interessado entrar em contato!
+</string>
+    <string name="str_meus_pets">Meus pets</string>
 
 </resources>

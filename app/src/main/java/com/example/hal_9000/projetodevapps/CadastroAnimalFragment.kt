@@ -25,6 +25,12 @@ class CadastroAnimalFragment : Fragment() {
             Toast.LENGTH_LONG).show()
 
         viewRoot.btCadastrar.background.setColorFilter(ContextCompat.getColor(context, R.color.theme_yellow_text), PorterDuff.Mode.MULTIPLY)
+        viewRoot.btCadastrar.setOnClickListener({
+            //TODO: Implementar
+            realizarCadastro()
+            // Abre o novo fragment se for bem sucedido
+            activity.supportFragmentManager.beginTransaction().replace(R.id.content_frame, ConfirmacaoDeCadastroAnimalFragment()).addToBackStack(null).commit()
+        })
 
         viewRoot.btAdocao.setOnCheckedChangeListener(trocarCorEFragment(viewRoot, SubFragmentAdocaoAnimal(), getString(R.string.str_colocar_para_adocao)))
         viewRoot.btApadrinhar.setOnCheckedChangeListener(trocarCorEFragment(viewRoot, SubFragmentApadrinhamentoAnimal(), getString(R.string.str_procurar_padrinho)))
