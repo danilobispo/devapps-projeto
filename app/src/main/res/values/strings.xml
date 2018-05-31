@@ -48,6 +48,7 @@
     <string name="exigencias_doador">EXIGÊNCIAS DO DOADOR</string>
     <string name="info">INFORMAÇÕES ADICIONAIS</string>
     <string name="pret_adotar">PRENTENDO ADOTAR</string>
+    <string name="entrar">ENTRAR OU CADASTRAR</string>
     <string name="str_tenho_interesse">Tenho interesse em cadastrar o animal para</string>
     <string name="nome_do_animal">Nome do animal</string>
     <string name="fotos_do_animal">Fotos do animal</string>
@@ -106,5 +107,7 @@
     <string name="str_confirmacao_cadastro_animal">O cadastro do seu pet foi realizado com sucesso!\n\nCertifique-se que permitiu o envio de notificações por push no campo privacidade do menu configurações do aplicativo. Assim, poderemos te avisar assim que alguém interessado entrar em contato!
 </string>
     <string name="str_meus_pets">Meus pets</string>
-
+    <string name="cadastrar_usuario">CADASTRAR</string>
+    <string name="dica_senha">Digite a senha escolhida</string>
+    <string name="dica_email">Digite seu e-mail</string>
 </resources>
