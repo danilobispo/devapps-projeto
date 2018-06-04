@@ -110,4 +110,6 @@
     <string name="cadastrar_usuario">CADASTRAR</string>
     <string name="dica_senha">Digite a senha escolhida</string>
     <string name="dica_email">Digite seu e-mail</string>
+    <string name="chat">CHAT</string>
+    <string name="hitories">HOSTÓRIAS</string>
 </resources>
