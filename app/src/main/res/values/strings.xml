@@ -118,4 +118,9 @@
     <string name="username">NOME DE USUÁRIO</string>
     <string name="historico">HISTÓRICO</string>
     <string name="editar_perfil">EDITAR PERFIL</string>
+    <string name="ops">Ops!</string>
+    <string name="aviso">Você não pode realizar esta ação sem possuir cadastro.</string>
+    <string name="f_cadastro">FAZER CADASTRO</string>
+    <string name="p_cadastro">Já possui cadastro?</string>
+    <string name="f_login">FAZER LOGIN</string>
 </resources>

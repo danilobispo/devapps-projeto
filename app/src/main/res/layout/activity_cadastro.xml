@@ -5,90 +5,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroducaoFragment">
+    tools:context=".CadastroFragment">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/text_int_ola"
+            android:id="@+id/text_int_ops"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="52dp"
             android:fontFamily="@font/courgette"
-            android:text="@string/ola"
-            android:textColor="@color/theme_yellow"
-            android:textSize="72dp"
+            android:text="@string/ops"
+            android:textColor="@color/drawer_primary_color"
+            android:textSize="53dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_int_boas_vindas"
+            android:id="@+id/text_int_aviso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
             android:fontFamily="@font/roboto"
-            android:text="@string/boas_vindas"
+            android:text="@string/aviso"
             android:textAlignment="center"
             android:textColor="@color/theme_gray_75"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_int_ola" />
+            app:layout_constraintTop_toBottomOf="@+id/text_int_ops" />
 
         <Button
-            android:id="@+id/button_int_adotar"
+            android:id="@+id/button_int_fazer_cadastro"
             android:layout_width="232dp"
             android:layout_height="40dp"
-            android:layout_marginTop="48dp"
-            android:background="@color/theme_yellow"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
             android:fontFamily="@font/roboto"
-            android:text="@string/adotar"
+            android:text="@string/f_cadastro"
             android:textColor="@color/cor_texto"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_int_boas_vindas" />
-
-        <Button
-            android:id="@+id/button_int_ajudar"
-            android:layout_width="232dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="12dp"
-            android:background="@color/theme_yellow"
-            android:fontFamily="@font/roboto"
-            android:text="@string/ajudar"
-            android:textColor="@color/cor_texto"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_int_adotar" />
-
-        <Button
-            android:id="@+id/button_int_cadastrar"
-            android:layout_width="232dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="12dp"
-            android:background="@color/theme_yellow"
-            android:fontFamily="@font/roboto"
-            android:text="@string/cadastrar"
-            android:textColor="@color/cor_texto"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_int_ajudar" />
+            app:layout_constraintTop_toBottomOf="@+id/text_int_aviso" />
 
         <TextView
-            android:id="@+id/text_int_login"
+            android:id="@+id/text_int_possui_cadastro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="68dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="45dp"
             android:fontFamily="@font/roboto"
-            android:text="@string/login"
-            android:textSize="16sp"
-            android:textColor="@color/theme_logo_blue"
+            android:text="@string/p_cadastro"
+            android:textAlignment="center"
+            android:textColor="@color/theme_gray_75"
+            app:layout_constraintHorizontal_bias="0.469"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_int_cadastrar" />
+            app:layout_constraintTop_toBottomOf="@+id/button_int_fazer_cadastro" />
+
+        <Button
+            android:id="@+id/button_int_fazer_login"
+            android:layout_width="232dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/roboto"
+            android:text="@string/f_login"
+            android:textColor="@color/cor_texto"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_int_possui_cadastro" />
+
 
     </android.support.constraint.ConstraintLayout>
 
