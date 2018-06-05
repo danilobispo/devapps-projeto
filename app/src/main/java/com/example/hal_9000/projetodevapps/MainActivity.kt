@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun montarListaDeOpcoesDeUsuario(): ArrayList<Subcategoria> {
         val listaDeSubcategoria = ArrayList<Subcategoria>()
-        listaDeSubcategoria.add(Subcategoria("Meu perfil", null))
+        listaDeSubcategoria.add(Subcategoria("Meu perfil", PerfilFragment()))
         listaDeSubcategoria.add(Subcategoria("Meus pets", null))
         listaDeSubcategoria.add(Subcategoria("Favoritos", null))
         listaDeSubcategoria.add(Subcategoria("Chat", null))

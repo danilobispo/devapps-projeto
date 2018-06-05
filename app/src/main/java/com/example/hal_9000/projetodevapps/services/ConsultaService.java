@@ -2,6 +2,7 @@ package com.example.hal_9000.projetodevapps.services;
 
 import com.example.hal_9000.projetodevapps.Model.Animal;
 import com.example.hal_9000.projetodevapps.Model.Evento;
+import com.example.hal_9000.projetodevapps.Model.Pessoa;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +59,13 @@ public class ConsultaService {
                 "ICC Centro",
                 "CCCC"));
         return eventosList;
+    }
+
+    public Pessoa getProfile() {
+        return new Pessoa("Marilia Martins de Souza", "27 anos",
+                "marilia_martins@gmail.com", "", "Sobradinho - DF", "Rua 203, conjunto B, casa 37",
+                "(61) 98274-2947", "mari_martins", "123", "123",
+                null, "adotou 1 gato");
     }
 }
 

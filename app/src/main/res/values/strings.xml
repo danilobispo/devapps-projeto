@@ -110,6 +110,12 @@
     <string name="cadastrar_usuario">CADASTRAR</string>
     <string name="dica_senha">Digite a senha escolhida</string>
     <string name="dica_email">Digite seu e-mail</string>
-    <string name="chat">CHAT</string>
     <string name="hitories">HOSTÓRIAS</string>
+    <string name="nome">NOME COMPLETO</string>
+    <string name="email">EMAIL</string>
+    <string name="endereco">ENDEREÇO</string>
+    <string name="telefone">TELEFONE</string>
+    <string name="username">NOME DE USUÁRIO</string>
+    <string name="historico">HISTÓRICO</string>
+    <string name="editar_perfil">EDITAR PERFIL</string>
 </resources>
