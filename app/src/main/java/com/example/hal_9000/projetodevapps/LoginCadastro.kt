@@ -37,6 +37,7 @@ class LoginCadastro : Fragment(){
         mAuth!!.createUserWithEmailAndPassword(email,password)
               .addOnCompleteListener(activity, { task ->
                   if (task.isSuccessful){
+                      abrirTelaPrincipal()
                       Toast.makeText(context,"Cadastro efetuado com sucesso",Toast.LENGTH_LONG).show()
                   }else
                   {
@@ -46,4 +47,11 @@ class LoginCadastro : Fragment(){
               })
 
     }
+
+    fun abrirTelaPrincipal() {
+
+        val intentAbrirTelaPrincipal = Intent(activity, MainActivity::class.java)
+        startActivity(intentAbrirTelaPrincipal)
+    }
+
 }
