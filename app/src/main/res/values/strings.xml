@@ -48,7 +48,7 @@
     <string name="exigencias_doador">EXIGÊNCIAS DO DOADOR</string>
     <string name="info">INFORMAÇÕES ADICIONAIS</string>
     <string name="pret_adotar">PRENTENDO ADOTAR</string>
-    <string name="entrar">ENTRAR OU CADASTRAR</string>
+    <string name="entrar">ENTRAR</string>
     <string name="str_tenho_interesse">Tenho interesse em cadastrar o animal para</string>
     <string name="nome_do_animal">Nome do animal</string>
     <string name="fotos_do_animal">Fotos do animal</string>
@@ -123,4 +123,5 @@
     <string name="f_cadastro">FAZER CADASTRO</string>
     <string name="p_cadastro">Já possui cadastro?</string>
     <string name="f_login">FAZER LOGIN</string>
+    <string name="dica_senha2">Digite a senha</string>
 </resources>
