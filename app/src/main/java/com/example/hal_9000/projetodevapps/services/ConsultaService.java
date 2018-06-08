@@ -1,6 +1,7 @@
 package com.example.hal_9000.projetodevapps.services;
 
 import com.example.hal_9000.projetodevapps.Model.Animal;
+import com.example.hal_9000.projetodevapps.Model.Categoria;
 import com.example.hal_9000.projetodevapps.Model.Evento;
 import com.example.hal_9000.projetodevapps.Model.Pessoa;
 
@@ -27,6 +28,24 @@ public class ConsultaService {
         List<Animal> animaisParaAdocao = new ArrayList<Animal>();
         for (int i = 0; i < 20; i++) {
             Animal dummy = new Animal();
+            dummy.setName("Nome " + String.valueOf(i));
+            dummy.setPorte("Porte " + String.valueOf(i));
+            dummy.setIdade(i);
+            dummy.setLocalizacao("Localizacao " + String.valueOf(i));
+            dummy.setSexo("Sexo " + String.valueOf(i));
+            dummy.setImagem_uri(null);
+            animaisParaAdocao.add(dummy);
+        }
+        return animaisParaAdocao;
+    }
+
+    public List<Animal> getMeusPets() {
+        List<Animal> animaisParaAdocao = new ArrayList<Animal>();
+        for (int i = 0; i < 5; i++) {
+
+            Animal dummy = new Animal();
+            dummy.setCategoria("AJUDAR | APADRINHAR");
+            dummy.setQtInteressados(3);
             dummy.setName("Nome " + String.valueOf(i));
             dummy.setPorte("Porte " + String.valueOf(i));
             dummy.setIdade(i);

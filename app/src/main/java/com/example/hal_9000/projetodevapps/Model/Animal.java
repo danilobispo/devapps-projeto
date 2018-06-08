@@ -19,6 +19,16 @@ public class Animal implements Serializable {
     private ArrayList<String> saude;
     private ArrayList<String> exigencias;
     private String sobre;
+    private int qtInteressados;
+
+    public int getQtInteressados() {
+        return qtInteressados;
+    }
+
+    public void setQtInteressados(int qtInteressados) {
+        this.qtInteressados = qtInteressados;
+    }
+
 
     public String getCategoria() {
         return categoria;
