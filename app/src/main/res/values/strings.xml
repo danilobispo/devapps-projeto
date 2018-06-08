@@ -124,4 +124,6 @@
     <string name="p_cadastro">Já possui cadastro?</string>
     <string name="f_login">FAZER LOGIN</string>
     <string name="dica_senha2">Digite a senha</string>
+    <string name="interessados">VER INTERESSADOS</string>
+    <string name="remover">REMOVER</string>
 </resources>

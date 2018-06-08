@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.hal_9000.projetodevapps.DetalheAnimalFragment;
+import com.example.hal_9000.projetodevapps.DetalheMeuPetFragment;
 import com.example.hal_9000.projetodevapps.Model.Animal;
 import com.example.hal_9000.projetodevapps.R;
 
@@ -60,7 +61,7 @@ public class MeusPetsAdapter extends RecyclerView.Adapter<MeusPetsAdapter.ViewHo
                         Animal clickedItem = mAnimais.get(pos);
 
                         AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                        Fragment myFragment = new DetalheAnimalFragment();
+                        Fragment myFragment = new DetalheMeuPetFragment();
 
                         Bundle arguments = new Bundle();
                         arguments.putSerializable( "animal" , clickedItem);
