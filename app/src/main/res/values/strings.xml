@@ -126,4 +126,6 @@
     <string name="dica_senha2">Digite a senha</string>
     <string name="interessados">VER INTERESSADOS</string>
     <string name="remover">REMOVER</string>
+    <string name="desc_favorite_icon">favorite icon on card</string>
+    <string name="desc_animal_photo">image of dog</string>
 </resources>

@@ -57,6 +57,25 @@ public class ConsultaService {
         return animaisParaAdocao;
     }
 
+    public List<Animal> getFavoritos() {
+        List<Animal> animaisParaAdocao = new ArrayList<Animal>();
+        for (int i = 0; i < 5; i++) {
+
+            Animal dummy = new Animal();
+            dummy.setCategoria("AJUDAR | APADRINHAR");
+            dummy.setQtInteressados(3);
+            dummy.setName("Nome " + String.valueOf(i));
+            dummy.setPorte("Porte " + String.valueOf(i));
+            dummy.setIdade(i);
+            dummy.setLocalizacao("Localizacao " + String.valueOf(i));
+            dummy.setSexo("Sexo " + String.valueOf(i));
+            dummy.setImagem_uri(null);
+            animaisParaAdocao.add(dummy);
+        }
+        return animaisParaAdocao;
+    }
+
+
     public ArrayList<Evento> getEventos() {
         ArrayList<Evento> eventosList = new ArrayList<Evento>();
         eventosList.add(new Evento(

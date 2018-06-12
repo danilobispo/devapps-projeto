@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         val listaDeSubcategoria = ArrayList<Subcategoria>()
         listaDeSubcategoria.add(Subcategoria("Meu perfil", PerfilFragment()))
         listaDeSubcategoria.add(Subcategoria("Meus pets", MuesPetsFragment()))
-        listaDeSubcategoria.add(Subcategoria("Favoritos", null))
+        listaDeSubcategoria.add(Subcategoria("Favoritos", FavoritosFragment()))
         listaDeSubcategoria.add(Subcategoria("Chat", null))
 
         return listaDeSubcategoria

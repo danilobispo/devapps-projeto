@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="290dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:id="@+id/card_favoritos_card_pet"
+    >
+    <android.support.constraint.ConstraintLayout
+        card_view:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/card_favoritos_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="#cfe9e5">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/card_favoritos_nome"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/card_favoritos_card_likeIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/desc_favorite_icon"/>
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/card_favoritos_imagem_pet"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            card_view:layout_constraintTop_toBottomOf="@id/card_favoritos_toolbar"
+            android:contentDescription="@string/desc_animal_photo"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/card_favoritos_container_string"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:paddingTop="5dp"
+            card_view:layout_constraintTop_toBottomOf="@id/card_favoritos_imagem_pet">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/card_favoritos_sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="13sp"
+                card_view:layout_constraintTop_toTopOf="@id/card_favoritos_container_string"
+                card_view:layout_constraintStart_toStartOf="@id/card_favoritos_container_string"
+                card_view:layout_constraintEnd_toStartOf="@id/card_favoritos_idade"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/card_favoritos_idade"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="13sp"
+                card_view:layout_constraintTop_toTopOf="@id/card_favoritos_container_string"
+                card_view:layout_constraintStart_toEndOf="@id/card_favoritos_sexo"
+                card_view:layout_constraintEnd_toStartOf="@id/card_favoritos_porte"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/card_favoritos_porte"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="13sp"
+                card_view:layout_constraintTop_toTopOf="@id/card_favoritos_container_string"
+                card_view:layout_constraintStart_toEndOf="@id/card_favoritos_idade"
+                card_view:layout_constraintEnd_toEndOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/card_favoritos_localizaçao"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="13sp"
+            card_view:layout_constraintTop_toBottomOf="@id/card_favoritos_container_string"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
