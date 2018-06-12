@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         subcategoriaAtalhos.add(Subcategoria("Cadastrar um pet", null))
         subcategoriaAtalhos.add(Subcategoria("Adotar um pet", AdotarFragment()))
         subcategoriaAtalhos.add(Subcategoria("Ajudar um pet", AjudarFragment()))
-        subcategoriaAtalhos.add(Subcategoria("Apadrinhar um pet", null))
+        subcategoriaAtalhos.add(Subcategoria("Apadrinhar um pet", ApadrinharFragment()))
         val categoriaAtalhos = Categoria(
             "Atalhos",
             ContextCompat.getDrawable(context, R.drawable.ic_book_black_18dp),

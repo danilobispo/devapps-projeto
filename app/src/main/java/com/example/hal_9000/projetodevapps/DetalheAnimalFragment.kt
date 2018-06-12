@@ -12,7 +12,7 @@ import java.nio.file.Files.find
 
 class DetalheAnimalFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val rootView = inflater?.inflate(R.layout.fragment_detalhe_meu_pet, container, false)
+        val rootView = inflater?.inflate(R.layout.detalhe_animal, container, false)
         val args = arguments;
         val animal:Animal = args.getSerializable("animal") as Animal
 
