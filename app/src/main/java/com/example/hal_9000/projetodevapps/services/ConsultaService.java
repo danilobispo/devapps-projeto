@@ -4,11 +4,29 @@ import com.example.hal_9000.projetodevapps.Model.Animal;
 import com.example.hal_9000.projetodevapps.Model.Categoria;
 import com.example.hal_9000.projetodevapps.Model.Evento;
 import com.example.hal_9000.projetodevapps.Model.Pessoa;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ConsultaService {
+
+    private FirebaseDatabase database;
+    private DatabaseReference dbRef;
+
+    public ConsultaService() {
+        this.database = FirebaseDatabase.getInstance();
+        this.dbRef = this.database.getReference();
+    }
+
+    public void callFirebase(ValueEventListener action) {
+        this.getDbRef().addListenerForSingleValueEvent(action);
+    }
+
+
+
     public List<Animal> getAnimaisParaAdocao() {
         List<Animal> animaisParaAdocao = new ArrayList<Animal>();
         for (int i = 0; i < 20; i++) {
@@ -119,6 +137,22 @@ public class ConsultaService {
                 "marilia_martins@gmail.com", "", "Sobradinho - DF", "Rua 203, conjunto B, casa 37",
                 "(61) 98274-2947", "mari_martins", "123", "123",
                 null, "adotou 1 gato");
+    }
+
+    public FirebaseDatabase getDatabase() {
+        return database;
+    }
+
+    public void setDatabase(FirebaseDatabase database) {
+        this.database = database;
+    }
+
+    public DatabaseReference getDbRef() {
+        return dbRef;
+    }
+
+    public void setDbRef(DatabaseReference dbRef) {
+        this.dbRef = dbRef;
     }
 }
 

@@ -22,7 +22,7 @@ public class AjudarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View rootView = inflater.inflate(R.layout.fragment_adotar, container, false);
         RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.rvAnimais);
-        AnimalAdapter adapter = new AnimalAdapter(getAnimalsFromService());
+        AnimalAdapter adapter = new AnimalAdapter("ajudar");
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(this.getContext()));
         return rootView;

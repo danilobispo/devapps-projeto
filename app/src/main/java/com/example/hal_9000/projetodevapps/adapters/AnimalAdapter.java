@@ -20,12 +20,24 @@ import com.example.hal_9000.projetodevapps.AjudarFragment;
 import com.example.hal_9000.projetodevapps.DetalheAnimalFragment;
 import com.example.hal_9000.projetodevapps.Model.Animal;
 import com.example.hal_9000.projetodevapps.R;
+import com.example.hal_9000.projetodevapps.services.ConsultaService;
+import com.google.android.gms.common.util.WorkSourceUtil;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 
 import static android.content.ContentValues.TAG;
 
 public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder> {
+
+    CountDownLatch cd = new CountDownLatch(1);
+    ConsultaService service = new ConsultaService();
 
     // Provide a direct reference to each of the views within a data item
     // Used to cache the views within the item layout for fast access
@@ -55,36 +67,78 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
             localizacao = (android.support.v7.widget.AppCompatTextView) itemView.findViewById(R.id.localizaçao);
             imagem = (ImageView) itemView.findViewById(R.id.imagem_pet);
 
-            itemView.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick(View v)
+            try {
+                cd.await();
+                itemView.setOnClickListener(new View.OnClickListener()
                 {
-                    int pos = getAdapterPosition();
-                    // check if item still exists
-                    if(pos != RecyclerView.NO_POSITION){
-                        Animal clickedItem = mAnimais.get(pos);
+                    @Override
+                    public void onClick(View v)
+                    {
+                        int pos = getAdapterPosition();
+                        // check if item still exists
+                        if(pos != RecyclerView.NO_POSITION){
 
-                        AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                        Fragment myFragment = new DetalheAnimalFragment();
+                            Animal clickedItem = mAnimais.get(pos);
 
-                        Bundle arguments = new Bundle();
-                        arguments.putSerializable( "animal" , clickedItem);
-                        myFragment.setArguments(arguments);
-                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, myFragment).addToBackStack(null).commit();
+                            AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                            Fragment myFragment = new DetalheAnimalFragment();
+
+                            Bundle arguments = new Bundle();
+                            arguments.putSerializable( "animal" , clickedItem);
+                            myFragment.setArguments(arguments);
+                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, myFragment).addToBackStack(null).commit();
+                        }
                     }
-                }
-            });
+                });
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
 
         }
     }
 
     private List<Animal> mAnimais;
 
-    // Pass in the contact array into the constructor
-    public AnimalAdapter(List<Animal> animais) {
-        mAnimais = animais;
+    public List<Animal> getmAnimais() {
+        return mAnimais;
     }
+
+    public void setmAnimais(List<Animal> mAnimais) {
+        this.mAnimais = mAnimais;
+    }
+
+
+    /*TODO  Aqui na hora de criar  o adapter a gente passa a colection do firebase q a gente quer pegar*/
+    // Pass in the contact array into the constructor
+    public AnimalAdapter(String tipo) {
+
+        /*TODO aqui cria o listener pra pegar os dados e submete para o firebase, no caso eu criei um metodo no
+        * service q faz isso, mas rola de criar o firebase aqui*/
+        ValueEventListener postListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                //get all animals
+                Map<String, Animal> td = (HashMap<String,Animal>) dataSnapshot.getValue();
+                //set animals
+                setmAnimais(new ArrayList<Animal>(td.values()));
+
+                /*TODO esse cd e um CountDownLatch. basicamente tem o await e o countDonw, o countDown libera
+                * os outros awaits do codigo*/
+                cd.countDown();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.w(WorkSourceUtil.TAG, "loadPost:onCancelled", databaseError.toException());
+            }
+        };
+        /*chama o banco*/
+        service.callFirebase(postListener);
+
+    }
+
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -100,33 +154,47 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        // Get the data model based on position
-        Animal animal = mAnimais.get(position);
+        try {
+            this.cd.await();
+            // Get the data model based on position
+            Animal animal = mAnimais.get(position);
 
-        // Set item views based on your views and data model
-        android.support.v7.widget.AppCompatTextView nome = holder.nome;
-        nome.setText(animal.getName());
+            Log.d("animal", animal.getName());
+            // Set item views based on your views and data model
+            android.support.v7.widget.AppCompatTextView nome = holder.nome;
+            nome.setText(animal.getName());
 
-        android.support.v7.widget.AppCompatTextView porte = holder.porte;
-        porte.setText(animal.getPorte());
+            android.support.v7.widget.AppCompatTextView porte = holder.porte;
+            porte.setText(animal.getPorte());
 
-        android.support.v7.widget.AppCompatTextView sexo = holder.sexo;
-        sexo.setText(animal.getSexo());
+            android.support.v7.widget.AppCompatTextView sexo = holder.sexo;
+            sexo.setText(animal.getSexo());
 
-        android.support.v7.widget.AppCompatTextView idade = holder.idade;
-        idade.setText(Integer.toString(animal.getIdade()));
+            android.support.v7.widget.AppCompatTextView idade = holder.idade;
+            idade.setText(Integer.toString(animal.getIdade()));
 
-        android.support.v7.widget.AppCompatTextView localizacao = holder.localizacao;
-        localizacao.setText(animal.getLocalizacao());
+            android.support.v7.widget.AppCompatTextView localizacao = holder.localizacao;
+            localizacao.setText(animal.getLocalizacao());
 
-        ImageView imagem = holder.imagem;
-        imagem.setImageURI(animal.getImagem_uri());
+            ImageView imagem = holder.imagem;
+            imagem.setImageURI(animal.getImagem_uri());
+
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public int getItemCount() {
-        return mAnimais.size();
+        try {
+            cd.await();
+            return mAnimais.size();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 
 
