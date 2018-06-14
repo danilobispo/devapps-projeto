@@ -1,6 +1,5 @@
 package com.example.hal_9000.projetodevapps
 
-import android.app.Fragment
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.support.v7.app.AppCompatActivity
@@ -130,7 +129,7 @@ class MainActivity : AppCompatActivity() {
     private fun montarListaDeOpcoesDeUsuario(): ArrayList<Subcategoria> {
         val listaDeSubcategoria = ArrayList<Subcategoria>()
         listaDeSubcategoria.add(Subcategoria("Meu perfil", PerfilFragment()))
-        listaDeSubcategoria.add(Subcategoria("Meus pets", MuesPetsFragment()))
+        listaDeSubcategoria.add(Subcategoria("Meus pets", MeusPetsFragment()))
         listaDeSubcategoria.add(Subcategoria("Favoritos", FavoritosFragment()))
         listaDeSubcategoria.add(Subcategoria("Chat", null))
 

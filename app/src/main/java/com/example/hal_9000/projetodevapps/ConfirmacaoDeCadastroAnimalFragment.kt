@@ -17,6 +17,12 @@ class ConfirmacaoDeCadastroAnimalFragment : Fragment() {
         // Inflate the layout for this fragment
         val rootView = inflater!!.inflate(R.layout.fragment_confirmacao_de_cadastro_animal, container, false)
         rootView.btMeusPets.background.setColorFilter(ContextCompat.getColor(context, R.color.theme_yellow_text), PorterDuff.Mode.MULTIPLY)
+        rootView.btMeusPets.setOnClickListener({
+            fragmentManager.beginTransaction()
+                .replace(R.id.content_frame, MeusPetsFragment())
+                .addToBackStack(null)
+                .commit()
+        })
         return rootView
     }
 }
