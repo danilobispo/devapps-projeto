@@ -128,4 +128,12 @@
     <string name="remover">REMOVER</string>
     <string name="desc_favorite_icon">favorite icon on card</string>
     <string name="desc_animal_photo">image of dog</string>
+    <string name="str_notificacoes">Notificações</string>
+    <string name="str_ativar_notifica_es_de_chat">Ativar notificações de chat</string>
+    <string name="str_ativar_notifica_es_de_eventos">Ativar notificações de eventos</string>
+    <string name="str_ativar_notif_recordacao">Ativar notificações de recordação</string>
+    <string name="str_aviso_notificacoes_chat">Com as notificações de chat ativadas, você sempre receberá um aviso em seu celular quando alguém entrar em contato através do aplicativo</string>
+    <string name="str_aviso_notif_record">Com as notificações de recordação ativadas, você será sempre lembrado de entrar em contato com o doador (caso você adote um animal) a fim de cumprir o requisito de acompanhamento pós adoção</string>
+    <string name="str_aviso_notif_eventos">Com as notificações de evento ativadas, você sempre receberá uma notificação para lembrá-lo dos eventos da semana</string>
+    <string name="str_salvar_alteracoes">Salvar alterações</string>
 </resources>

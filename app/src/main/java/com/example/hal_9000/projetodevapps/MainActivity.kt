@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
         // Configurações
         val subcategoriaConfiguracoes = ArrayList<Subcategoria>()
         //TODO: Inserir referências para fragments
-        subcategoriaConfiguracoes.add(Subcategoria("Privacidade", null))
+        subcategoriaConfiguracoes.add(Subcategoria("Privacidade", PrivacidadeFragment()))
         val categoriaConfiguracoes = Categoria(
             "Configurações",
             ContextCompat.getDrawable(context,R.drawable.ic_settings_black_18dp),
