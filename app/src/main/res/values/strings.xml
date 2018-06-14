@@ -136,4 +136,9 @@
     <string name="str_aviso_notif_record">Com as notificações de recordação ativadas, você será sempre lembrado de entrar em contato com o doador (caso você adote um animal) a fim de cumprir o requisito de acompanhamento pós adoção</string>
     <string name="str_aviso_notif_eventos">Com as notificações de evento ativadas, você sempre receberá uma notificação para lembrá-lo dos eventos da semana</string>
     <string name="str_salvar_alteracoes">Salvar alterações</string>
+    <string name="str_selecione_o_s_animal_is">Selecione o(s) animal(is)</string>
+    <string name="str_qual_processo_formalizado">Qual processo foi formalizado?</string>
+    <string name="str_apadrinhamento">Apadrinhamento</string>
+    <string name="str_selecione_o_usu_rio">Selecione o usuário</string>
+    <string name="str_finalizar_processo">Finalizar processo</string>
 </resources>

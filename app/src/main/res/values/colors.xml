@@ -24,4 +24,5 @@
     <color name="btn_blue">#88c9bf</color>
     <color name="theme_label_light_blue">#589b9b</color>
     <color name="background_privacidade_fa">#fafafa</color>
+    <color name="grey_bd">#bdbdbd</color>
 </resources>

@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        tools:context="com.example.hal_9000.projetodevapps.FinalizarProcessoFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_selecione_o_s_animal_is"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgListaDeAnimais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--TODO: Remover essas checkboxes assim que serviço de busca de animais for finalizado-->
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pequi" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bacon" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_qual_processo_formalizado"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgListaDeProcessos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--TODO: Remover essas checkboxes assim que serviço de busca de animais for finalizado-->
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_adocao" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_apadrinhamento" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_selecione_o_usu_rio"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgListaDeUsuarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--TODO: Remover essas checkboxes assim que serviço de busca de animais for finalizado-->
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_adocao" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_apadrinhamento" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btFinalizarProcesso"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@color/theme_logo_blue"
+        android:text="@string/str_finalizar_processo" />
+</RelativeLayout>

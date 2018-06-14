@@ -5,7 +5,6 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/llPrivacidadeNotificacoesLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -64,7 +63,8 @@
 
     <Button
         android:id="@+id/btSalvarAlteracoes"
-        android:layout_width="wrap_content"
+        android:background="@color/grey_bd"
+        android:layout_width="232dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
