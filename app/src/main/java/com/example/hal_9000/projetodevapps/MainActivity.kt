@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         // Atalhos
         val subcategoriaAtalhos = ArrayList<Subcategoria>()
         //TODO: Inserir referências para fragments
-        subcategoriaAtalhos.add(Subcategoria("Cadastrar um pet", null))
+        subcategoriaAtalhos.add(Subcategoria("Cadastrar um pet", CadastroAnimalFragment()))
         subcategoriaAtalhos.add(Subcategoria("Adotar um pet", AdotarFragment()))
         subcategoriaAtalhos.add(Subcategoria("Ajudar um pet", AjudarFragment()))
         subcategoriaAtalhos.add(Subcategoria("Apadrinhar um pet", ApadrinharFragment()))
