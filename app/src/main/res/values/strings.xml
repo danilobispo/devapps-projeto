@@ -141,4 +141,16 @@
     <string name="str_apadrinhamento">Apadrinhamento</string>
     <string name="str_selecione_o_usu_rio">Selecione o usuário</string>
     <string name="str_finalizar_processo">Finalizar processo</string>
+    <string name="str_seu_interesse">Seu interesse</string>
+    <string name="str_pesquisar_por_nome">Pesquisar por nome</string>
+    <string name="str_estado">Estado</string>
+    <string name="str_cidade">Cidade</string>
+    <string name="str_nome_do_pet_ou_usuario">Nome do pet ou usuário</string>
+    <string name="str_fazer_pesquisa">Fazer pesquisa</string>
+
+    <string name="str_falha_pesquisa"> Infelizmente, não encontramos nenhum animal com essas características em nosso aplicativo.\n\n
+        Mas não desista, pois temos lindos animais cadastrados! Experimente desabilitar e/ou alterar alguns filtros para encontrá-los.</string>
+    <string name="str_editar_filtragem">Editar filtragem</string>
+    <string name="str_desabilitar_filtros">Desabilitar filtros</string>
+
 </resources>

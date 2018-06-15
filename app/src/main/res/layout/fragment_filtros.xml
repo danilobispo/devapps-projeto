@@ -1,13 +1,355 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hal_9000.projetodevapps.FiltrosFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.hal_9000.projetodevapps.FiltrosFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutFiltros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/str_seu_interesse"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_yellow_text"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroAdotar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:textOn="@string/adotar"
+                        android:textOff="@string/adotar"/>
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroAjudar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:textOn="@string/ajudar"
+                        android:textOff="@string/ajudar" />
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroApadrinhar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textOff="@string/str_apadrinhar"
+                        android:textOn="@string/str_apadrinhar"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/str_especie"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_yellow_text"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroCachorro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:textOn="@string/str_cachorro"
+                        android:textOff="@string/str_cachorro"/>
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroGato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textOn="@string/str_gato"
+                        android:textOff="@string/str_gato" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/sexo"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_yellow_text"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroMacho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:textOn="@string/str_macho"
+                        android:textOff="@string/str_macho" />
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroFemea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textOn="@string/str_femea"
+                        android:textOff="@string/str_femea" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/idade"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_yellow_text"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroFilhote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:textOn="@string/str_filhote"
+                        android:textOff="@string/str_filhote"/>
+
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroAdulto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:textOn="@string/str_adulto"
+                        android:textOff="@string/str_adulto"/>
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroIdoso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textOn="@string/str_idoso"
+                        android:textOff="@string/str_idoso"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/porte"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_yellow_text"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroPequeno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:textOff="@string/str_pequeno"
+                        android:textOn="@string/str_pequeno"/>
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroMedio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:textOn="@string/str_medio"
+                        android:textOff="@string/str_medio" />
+
+                    <ToggleButton
+                        android:background="@android:drawable/btn_default"
+                        android:id="@+id/btFiltroGrande"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textOn="@string/str_grande"
+                        android:textOff="@string/str_grande"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/local"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_yellow_text"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etFiltroEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_estado" />
+
+                <EditText
+                    android:id="@+id/etFiltroCidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_cidade" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/str_pesquisar_por_nome"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_yellow_text"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etFiltroNomeDeUsuarioOuPet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_nome_do_pet_ou_usuario" 
+                    android:layout_marginBottom="1dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutFiltros"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/btSalvarAlteracoes"
+                android:layout_width="232dp"
+                android:layout_height="wrap_content"
+                android:background="@color/theme_yellow"
+                android:text="@string/str_fazer_pesquisa" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

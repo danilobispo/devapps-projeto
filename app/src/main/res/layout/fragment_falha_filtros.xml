@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hal_9000.projetodevapps.FalhaFiltrosFragment">
+
+    <TextView
+        android:id="@+id/textoOpsFiltrarAnimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:gravity="center_horizontal"
+        android:text="@string/ops" />
+    <TextView
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="52dp"
+        android:textColor="@color/theme_gray_75"
+        android:id="@+id/textoFalhaFiltrarAnimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_falha_pesquisa"
+        android:textSize="14sp"
+        android:layout_below="@id/textoOpsFiltrarAnimal"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btEditarFiltragem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@color/theme_yellow"
+            android:text="@string/str_editar_filtragem" />
+
+        <Button
+            android:id="@+id/btDesabilitarFiltros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_yellow"
+            android:text="@string/str_desabilitar_filtros" />
+
+    </LinearLayout>
+
+</RelativeLayout>
