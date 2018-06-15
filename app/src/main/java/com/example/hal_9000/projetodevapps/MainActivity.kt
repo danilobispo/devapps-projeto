@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
         subcategoriaInformacoes.add(Subcategoria("Dicas", DicasFragment()))
         subcategoriaInformacoes.add(Subcategoria("Eventos", EventosFragment()))
         subcategoriaInformacoes.add(Subcategoria("Legislação", LegislacaoFragment()))
-        subcategoriaInformacoes.add(Subcategoria("Termo de adoção", null))
+        subcategoriaInformacoes.add(Subcategoria("Termo de adoção", TermoAdocaoFragment()))
         subcategoriaInformacoes.add(Subcategoria("Histórias de adoção", null))
         val categoriaInformacoes = Categoria(
             "Informações",

@@ -198,4 +198,19 @@
      7 Para finalizar o corte da unha, dê o acabamento com uma lixa;<br/>
      8 Não deixe de dar pequenos pedaços de bifinhos para recompensar o momento;<br/>
   ]]></string>
+    <string name="termo_adocao">TERMO DE ADOÇÃO</string>
+    <string name="termo_apadrinhamento">TERMO DE APADRINHAMENTO</string>
+    <string name="texto_termo1">O termo de adoção é um termo que oficializa o processo de adoção de um animal. Similarmente funciona o termo de apadrinhamento.
+</string>
+    <string name="texto_termo2">É importante que o doador/dono exija a assinatura deste termo por parte do adotante/padrinho, de forma a ter prova legal de que a pessoa adquiriu o animal. Assim, podem ser tomadas providências legais em caso de maus tratos ou negligência ao animal.
+</string>
+    <string name="texto_termo3">Para facilitar o processo, o Meau disponibiliza o termo aos seus doadores e donos de animais que utilizam o aplicativo para encontrar um destino e/ou ajuda para seu bichinho. Este termo é enviado por e-mail para que possa ser feita a impressão e, no momento de entrega do animal (ou quando o padrinho vai conhecê-lo), seja feita a assinatura por parte do adotante/padrinho.
+</string>
+    <string name="texto_termo4">Pressionando os botões abaixo, você receberá em seu email o termo em questão, nos formatos .doc (word) e .pdf.
+</string>
+    <string name="termo_enviado1">Pronto!</string>
+    <string name="termo_enviado2">O termo já foi enviado para o seu email. Caso não tenha recebido, verifique se o seu email está cadastrado corretamente na área "meu perfil", no menu principal.</string>
+    <string name="termo_enviado3">Para entender um pouco mais sobre as leis que envolvem esse processo, acesse nossa área de legislação!</string>
+    <string name="legislacao">LEGISLAÇÃO</string>
 </resources>
+
