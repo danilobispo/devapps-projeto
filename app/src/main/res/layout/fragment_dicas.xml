@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DicasFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/home_dicas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.v7.widget.CardView
+            android:id="@+id/dicas_card_comportamento"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="20dp"
+            >
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/dicas_header"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/dicas_tb_comp"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="#cfe9e5">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="18sp"
+                        android:textColor="@color/theme_gray_43"
+                        android:text="@string/comportamento"/>
+                    <ImageView
+                        android:contentDescription="@string/ecpand"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                </android.support.v7.widget.Toolbar>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica1"
+                    app:layout_constraintTop_toBottomOf="@id/dicas_tb_comp"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica1"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica2"
+                    app:layout_constraintTop_toBottomOf="@id/dica1"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica2"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica3"
+                    app:layout_constraintTop_toBottomOf="@id/dica2"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica3"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/dicas_card_alimentacao"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/dicas_card_comportamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="20dp"
+            >
+            <android.support.constraint.ConstraintLayout
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/dicas_tb_alim"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="#cfe9e5">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="18sp"
+                        android:textColor="@color/theme_gray_43"
+                        android:text="@string/alimentacao"/>
+                    <ImageView
+                        android:contentDescription="@string/ecpand"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        />
+
+
+                </android.support.v7.widget.Toolbar>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica4"
+                    app:layout_constraintTop_toBottomOf="@id/dicas_tb_alim"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica4"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica5"
+                    app:layout_constraintTop_toBottomOf="@id/dica4"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica5"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica6"
+                    app:layout_constraintTop_toBottomOf="@id/dica5"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica6"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica7"
+                    app:layout_constraintTop_toBottomOf="@id/dica6"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica7"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/dicas_card_saude"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/dicas_card_alimentacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <android.support.constraint.ConstraintLayout
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/dicas_tb_saude"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="#cfe9e5">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="18sp"
+                        android:textColor="@color/theme_gray_43"
+                        android:text="@string/saude"/>
+                    <ImageView
+                        android:contentDescription="@string/ecpand"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                </android.support.v7.widget.Toolbar>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica8"
+                    app:layout_constraintTop_toBottomOf="@id/dicas_tb_saude"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/dica8_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica8"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica9"
+                    app:layout_constraintTop_toBottomOf="@id/dica8"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica9"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica10"
+                    app:layout_constraintTop_toBottomOf="@id/dica9"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica10"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica11"
+                    app:layout_constraintTop_toBottomOf="@id/dica10"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica11"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica12"
+                    app:layout_constraintTop_toBottomOf="@id/dica11"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica12"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica13"
+                    app:layout_constraintTop_toBottomOf="@id/dica12"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica13"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica14"
+                    app:layout_constraintTop_toBottomOf="@id/dica13"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica14"/>
+
+                </android.support.constraint.ConstraintLayout>
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica15"
+                    app:layout_constraintTop_toBottomOf="@id/dica14"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica15"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/dica16"
+                    app:layout_constraintTop_toBottomOf="@id/dica15"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dica16"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
