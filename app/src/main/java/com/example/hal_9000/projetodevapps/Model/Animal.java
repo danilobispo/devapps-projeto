@@ -13,7 +13,7 @@ public class Animal implements Serializable {
     private String sexo;
     private String porte;
     private int idade;
-    private Uri imagem_uri;
+    private String imagem_uri;
     private String localizacao;
     private ArrayList<String> temperamento;
     private ArrayList<String> saude;
@@ -110,19 +110,19 @@ public class Animal implements Serializable {
         this.sobre = sobre;
     }
 
-    public Uri getImagem_uri() {
-        return imagem_uri;
-    }
-
-    public void setImagem_uri(Uri imagem_uri) {
-        this.imagem_uri = imagem_uri;
-    }
-
     public String getLocalizacao() {
         return localizacao;
     }
 
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
+    }
+
+    public String getImagem_uri() {
+        return imagem_uri;
+    }
+
+    public void setImagem_uri(String imagem_uri) {
+        this.imagem_uri = imagem_uri;
     }
 }

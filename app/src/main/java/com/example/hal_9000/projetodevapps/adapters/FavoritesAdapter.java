@@ -112,8 +112,6 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.View
         android.support.v7.widget.AppCompatTextView localizacao = holder.localizacao;
         localizacao.setText(animal.getLocalizacao());
 
-        ImageView imagem = holder.imagem;
-        imagem.setImageURI(animal.getImagem_uri());
 
     }
 

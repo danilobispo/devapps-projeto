@@ -2,6 +2,7 @@ package com.example.hal_9000.projetodevapps
 
 import android.graphics.PorterDuff
 import android.os.Bundle
+import android.support.constraint.Constraints.TAG
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.util.Log
@@ -10,9 +11,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
 import android.widget.Toast
-import android.widget.ToggleButton
+import com.example.hal_9000.projetodevapps.Model.Animal
+import com.example.hal_9000.projetodevapps.Model.Pessoa
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_cadastrar_animal.*
 import kotlinx.android.synthetic.main.fragment_cadastrar_animal.view.*
+
 
 /**
  * Created by Danilo José Bispo Galvão on 11/05/2018.
@@ -120,6 +124,20 @@ class CadastroAnimalFragment : Fragment() {
     }
 
     private fun realizarCadastro() {
-        // TODO: Realizar cadastro do animal no firebase daqui
+        // TODO: Parsear os campos preencridos e colocar no objeto aqui
+        val db = FirebaseFirestore.getInstance()
+        val animal = Animal();
+        animal.name = "teste";
+        /*user.put("especie", (radioGroupEspecie.checkedRadioButtonId as RadioButton).text)
+        user.put("sexo", (radioGroupSexo.checkedRadioButtonId as RadioButton).text)
+        user.put("porte", (radioGroupPorte.checkedRadioButtonId as RadioButton).text)
+        user.put("idade", (radioGroupIdade.checkedRadioButtonId as RadioButton).text)
+*/
+        // Add a new document with a generated ID
+        db.collection("users")
+                .add(animal)
+                .addOnSuccessListener { documentReference -> Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.id) }
+                .addOnFailureListener { e -> Log.w(TAG, "Error adding document", e) }
+
     }
 }

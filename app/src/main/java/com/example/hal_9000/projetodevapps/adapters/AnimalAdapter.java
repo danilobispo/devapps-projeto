@@ -119,9 +119,6 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
         android.support.v7.widget.AppCompatTextView localizacao = holder.localizacao;
         localizacao.setText(animal.getLocalizacao());
 
-        ImageView imagem = holder.imagem;
-        imagem.setImageURI(animal.getImagem_uri());
-
     }
 
     @Override
