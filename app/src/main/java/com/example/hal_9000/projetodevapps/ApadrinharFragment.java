@@ -37,7 +37,7 @@ public class ApadrinharFragment extends Fragment {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("animais")
-                .whereEqualTo("categoria", "Apadrinhar")
+                .whereEqualTo("apadrinhar", true)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override

@@ -38,7 +38,7 @@ public class AjudarFragment extends Fragment {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("animais")
-                .whereEqualTo("categoria", "Ajudar")
+                .whereEqualTo("ajudar", true)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override

@@ -100,8 +100,22 @@ public class MeusPetsAdapter extends RecyclerView.Adapter<MeusPetsAdapter.ViewHo
         android.support.v7.widget.AppCompatTextView interessados = holder.interessados;
         interessados.setText(animal.getQtInteressados() + " INTERESSADOS");
 
+
         android.support.v7.widget.AppCompatTextView tipo = holder.categoria;
-        tipo.setText(animal.getCategoria());
+        if (animal.isAdotar()) {
+            catergoria.concat("Adotar");
+        }
+        if (animal.isApadrinhar()) {
+            catergoria.concat("Apadrinhar");
+        }
+        if (animal.isAjudar()) {
+            if (catergoria.length() == 0) {
+                catergoria.concat("Ajudar");
+            } else {
+                catergoria.concat(" | Ajudar");
+            }
+        }
+        tipo.setText(catergoria);
 
     }
 

@@ -7,12 +7,14 @@ import java.util.ArrayList;
 
 public class Animal implements Serializable {
 
-    private String categoria;
+    private boolean adotar;
+    private boolean ajudar;
+    private boolean apadrinhar;
     private String name;
     private String especie;
     private String sexo;
     private String porte;
-    private int idade;
+    private String idade;
     private String imagem_uri;
     private String localizacao;
     private ArrayList<String> temperamento;
@@ -29,13 +31,28 @@ public class Animal implements Serializable {
         this.qtInteressados = qtInteressados;
     }
 
-
-    public String getCategoria() {
-        return categoria;
+    public boolean isAdotar() {
+        return adotar;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setAdotar(boolean adotar) {
+        this.adotar = adotar;
+    }
+
+    public boolean isAjudar() {
+        return ajudar;
+    }
+
+    public void setAjudar(boolean ajudar) {
+        this.ajudar = ajudar;
+    }
+
+    public boolean isApadrinhar() {
+        return apadrinhar;
+    }
+
+    public void setApadrinhar(boolean apadrinhar) {
+        this.apadrinhar = apadrinhar;
     }
 
     public String getName() {
@@ -70,11 +87,11 @@ public class Animal implements Serializable {
         this.porte = porte;
     }
 
-    public int getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 

@@ -5,7 +5,9 @@ import com.example.hal_9000.projetodevapps.Model.Categoria;
 import com.example.hal_9000.projetodevapps.Model.Evento;
 import com.example.hal_9000.projetodevapps.Model.Pessoa;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ConsultaService {
@@ -15,7 +17,7 @@ public class ConsultaService {
             Animal dummy = new Animal();
             dummy.setName("Nome " + String.valueOf(i));
             dummy.setPorte("Porte " + String.valueOf(i));
-            dummy.setIdade(i);
+            dummy.setIdade("Filhote " + String.valueOf(i));
             dummy.setLocalizacao("Localizacao " + String.valueOf(i));
             dummy.setSexo("Sexo " + String.valueOf(i));
             dummy.setImagem_uri(null);
@@ -30,7 +32,7 @@ public class ConsultaService {
             Animal dummy = new Animal();
             dummy.setName("Nome " + String.valueOf(i));
             dummy.setPorte("Porte " + String.valueOf(i));
-            dummy.setIdade(i);
+            dummy.setIdade("Filhote " + String.valueOf(i));
             dummy.setLocalizacao("Localizacao " + String.valueOf(i));
             dummy.setSexo("Sexo " + String.valueOf(i));
             dummy.setImagem_uri(null);
@@ -45,7 +47,7 @@ public class ConsultaService {
             Animal dummy = new Animal();
             dummy.setName("Nome " + String.valueOf(i));
             dummy.setPorte("Porte " + String.valueOf(i));
-            dummy.setIdade(i);
+            dummy.setIdade("Filhote " + String.valueOf(i));
             dummy.setLocalizacao("Localizacao " + String.valueOf(i));
             dummy.setSexo("Sexo " + String.valueOf(i));
             dummy.setImagem_uri(null);
@@ -59,11 +61,12 @@ public class ConsultaService {
         for (int i = 0; i < 5; i++) {
 
             Animal dummy = new Animal();
-            dummy.setCategoria("AJUDAR | APADRINHAR");
+            dummy.setAdotar(true);
+            dummy.setAjudar(true);
             dummy.setQtInteressados(3);
             dummy.setName("Nome " + String.valueOf(i));
             dummy.setPorte("Porte " + String.valueOf(i));
-            dummy.setIdade(i);
+            dummy.setIdade("Filhote " + String.valueOf(i));
             dummy.setLocalizacao("Localizacao " + String.valueOf(i));
             dummy.setSexo("Sexo " + String.valueOf(i));
             dummy.setImagem_uri(null);
@@ -77,11 +80,12 @@ public class ConsultaService {
         for (int i = 0; i < 5; i++) {
 
             Animal dummy = new Animal();
-            dummy.setCategoria("AJUDAR | APADRINHAR");
+            dummy.setAdotar(true);
+            dummy.setAjudar(true);
             dummy.setQtInteressados(3);
             dummy.setName("Nome " + String.valueOf(i));
             dummy.setPorte("Porte " + String.valueOf(i));
-            dummy.setIdade(i);
+            dummy.setIdade("Filhote " + String.valueOf(i));
             dummy.setLocalizacao("Localizacao " + String.valueOf(i));
             dummy.setSexo("Sexo " + String.valueOf(i));
             dummy.setImagem_uri(null);

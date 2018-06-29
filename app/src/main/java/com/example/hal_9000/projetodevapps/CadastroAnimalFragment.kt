@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.support.constraint.Constraints.TAG
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
+import android.system.Os.bind
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
+import android.widget.RadioButton
 import android.widget.Toast
 import com.example.hal_9000.projetodevapps.Model.Animal
 import com.example.hal_9000.projetodevapps.Model.Pessoa
@@ -125,16 +127,63 @@ class CadastroAnimalFragment : Fragment() {
 
     private fun realizarCadastro() {
         // TODO: Parsear os campos preencridos e colocar no objeto aqui
-        val db = FirebaseFirestore.getInstance()
-        val animal = Animal();
-        animal.name = "teste";
-        /*user.put("especie", (radioGroupEspecie.checkedRadioButtonId as RadioButton).text)
-        user.put("sexo", (radioGroupSexo.checkedRadioButtonId as RadioButton).text)
-        user.put("porte", (radioGroupPorte.checkedRadioButtonId as RadioButton).text)
-        user.put("idade", (radioGroupIdade.checkedRadioButtonId as RadioButton).text)
-*/
+        val animal = Animal()
+        animal.name = nomeDoAnimal.text.toString()
+        animal.isAdotar = btAdocao.isChecked
+        animal.isApadrinhar = btApadrinhar.isChecked
+        animal.isAjudar = btAjudar.isChecked
+
+        var id: Int = radioGroupEspecie.checkedRadioButtonId
+        if (id == cachorroOption.id) {
+            animal.especie = "cachorro"
+        } else if (id == gatoOption.id) {
+            animal.especie = "gato"
+        }
+
+        id = radioGroupSexo.checkedRadioButtonId
+        if (id == machoOption.id) {
+            animal.sexo = "Macho"
+        } else if (id == femeaOption.id) {
+            animal.sexo = "Femea"
+        }
+
+        id = radioGroupPorte.checkedRadioButtonId
+        if (id == pequenoOption.id) {
+            animal.porte = "Pequeno"
+        } else if (id == medioOption.id) {
+            animal.porte = "Medio"
+        } else if (id == grandeOption.id) {
+            animal.porte = "Grande"
+        }
+
+        id = radioGroupIdade.checkedRadioButtonId
+        if (id == filhoteOption.id) {
+            animal.idade = "Filhote"
+        } else if (id == adultoOption.id) {
+            animal.idade = "Adulto"
+        } else if (id == idosoOption.id) {
+            animal.idade = "Idoso"
+        }
+
+        animal.temperamento = ArrayList()
+        if (brincalhaoOption.isChecked) animal.temperamento.add("brincalhao")
+        if (timidoOption.isChecked) animal.temperamento.add("timido")
+        if (calmoOption.isChecked) animal.temperamento.add("calmo")
+        if (guardaOption.isChecked) animal.temperamento.add("guarda")
+        if (amorosoOption.isChecked) animal.temperamento.add("amoroso")
+        if (preguicosoOption.isChecked) animal.temperamento.add("preguicoso")
+
+        animal.saude = ArrayList()
+        if (vacinadoOption.isChecked) animal.saude.add("vacinado")
+        if (vermifugadoOption.isChecked) animal.saude.add("vermifugado")
+        if (castradoOption.isChecked) animal.saude.add("castrado")
+        if (doenteOption.isChecked) animal.saude.add("doente")
+
+        animal.sobre = etSobreOAnimal.text.toString()
+
         // Add a new document with a generated ID
-        db.collection("users")
+        val db = FirebaseFirestore.getInstance()
+        db.collection("animais")
                 .add(animal)
                 .addOnSuccessListener { documentReference -> Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.id) }
                 .addOnFailureListener { e -> Log.w(TAG, "Error adding document", e) }

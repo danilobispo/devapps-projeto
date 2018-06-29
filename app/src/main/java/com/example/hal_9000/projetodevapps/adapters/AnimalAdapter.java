@@ -114,7 +114,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
         sexo.setText(animal.getSexo());
 
         android.support.v7.widget.AppCompatTextView idade = holder.idade;
-        idade.setText(Integer.toString(animal.getIdade()));
+        idade.setText(animal.getIdade());
 
         android.support.v7.widget.AppCompatTextView localizacao = holder.localizacao;
         localizacao.setText(animal.getLocalizacao());
