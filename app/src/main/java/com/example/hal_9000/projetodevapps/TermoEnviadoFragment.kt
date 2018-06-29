@@ -22,7 +22,7 @@ class TermoEnviadoFragment : Fragment() {
 
     fun callLegislacao(){
         activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.content_frame, LegislacaoFragment()).commit()
+                .replace(R.id.content_frame, LegislacaoFragment()).addToBackStack(null).commit()
     }
 
 

@@ -4,11 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.support.v4.app.Fragment
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_cadastro.view.*
-import kotlinx.android.synthetic.main.introducao_fragment.view.*
 
 
 
@@ -28,11 +25,12 @@ class CadastroFragment: Fragment() {
 
     fun callCadastro() {
         activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.content_frame, LoginCadastro()).commit()
+                .replace(R.id.content_frame, LoginCadastro()).addToBackStack(null).commit()
     }
 
     fun callLogin() {
         activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.content_frame, LoginActivity()).commit()
+                .replace(R.id.content_frame, LoginActivity()).addToBackStack(null).commit()
     }
+
 }

@@ -25,12 +25,12 @@ class TermoAdocaoFragment : Fragment() {
 
     fun callTermoEnviado1(){
         activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.content_frame, TermoEnviadoFragment()).commit()
+                .replace(R.id.content_frame, TermoEnviadoFragment()).addToBackStack(null).commit()
     }
 
     fun callTermoEnviado2(){
         activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.content_frame, TermoEnviadoFragment()).commit()
+                .replace(R.id.content_frame, TermoEnviadoFragment()).addToBackStack(null).commit()
     }
 
 }

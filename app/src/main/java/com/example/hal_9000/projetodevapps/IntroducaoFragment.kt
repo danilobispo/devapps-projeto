@@ -50,6 +50,6 @@ class IntroducaoFragment: Fragment() {
 
     fun callLogin() {
         activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.content_frame, CadastroFragment()).commit()
+                .replace(R.id.content_frame, CadastroFragment()).addToBackStack(null).commit()
     }
 }
